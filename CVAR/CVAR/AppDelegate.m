@@ -7,18 +7,45 @@
 //
 
 #import "AppDelegate.h"
+#import "Article.h"
+#import "ArticlesViewController.h"
 
 @implementation AppDelegate
+{
+    NSMutableArray *_articles;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    _articles = [NSMutableArray arrayWithCapacity:20];
+    
+    Article *article = [[Article alloc] init];
+    article.name = @"Bill Evans";
+    article.game = @"Tic-Tac-Toe";
+    article.rating = 4;
+    [_articles addObject:article];
+    
+    article = [[Article alloc] init];
+    article.name = @"Oscar Peterson";
+    article.game = @"Spin the Bottle";
+    article.rating = 5;
+    [_articles addObject:article];
+    
+    article = [[Article alloc] init];
+    article.name = @"Dave Brubeck";
+    article.game = @"Texas Hold’em Poker";
+    article.rating = 2;
+    [_articles addObject:article];
+    
+    // Revise this logic if the storyboard is altered
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    UINavigationController *navigationController = [tabBarController viewControllers][0];
+    ArticlesViewController *articlesViewController = [navigationController viewControllers][0];
+    articlesViewController.articles = _articles;
+    
     return YES;
 }
-
+							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

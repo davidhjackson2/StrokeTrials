@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "63B5590618AFE0E400E33312"
+               BlueprintIdentifier = "633F7C3D18B0077900DDD58A"
                BuildableName = "CVAR.app"
                BlueprintName = "CVAR"
                ReferencedContainer = "container:CVAR.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "63B5592118AFE0E500E33312"
+               BlueprintIdentifier = "633F7C5E18B0077A00DDD58A"
                BuildableName = "CVARTests.xctest"
                BlueprintName = "CVARTests"
                ReferencedContainer = "container:CVAR.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "63B5590618AFE0E400E33312"
+            BlueprintIdentifier = "633F7C3D18B0077900DDD58A"
             BuildableName = "CVAR.app"
             BlueprintName = "CVAR"
             ReferencedContainer = "container:CVAR.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "63B5590618AFE0E400E33312"
+            BlueprintIdentifier = "633F7C3D18B0077900DDD58A"
             BuildableName = "CVAR.app"
             BlueprintName = "CVAR"
             ReferencedContainer = "container:CVAR.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "63B5590618AFE0E400E33312"
+            BlueprintIdentifier = "633F7C3D18B0077900DDD58A"
             BuildableName = "CVAR.app"
             BlueprintName = "CVAR"
             ReferencedContainer = "container:CVAR.xcodeproj">
