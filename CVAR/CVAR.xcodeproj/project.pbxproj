@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6338336918B046E1001CBE12 /* ArticleDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6338336818B046E1001CBE12 /* ArticleDetailsViewController.m */; };
+		6338336C18B05D6C001CBE12 /* GamePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6338336B18B05D6C001CBE12 /* GamePickerViewController.m */; };
 		633F7C4218B0077900DDD58A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633F7C4118B0077900DDD58A /* Foundation.framework */; };
 		633F7C4418B0077900DDD58A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633F7C4318B0077900DDD58A /* CoreGraphics.framework */; };
 		633F7C4618B0077900DDD58A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633F7C4518B0077900DDD58A /* UIKit.framework */; };
@@ -61,6 +63,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6338336718B046E1001CBE12 /* ArticleDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDetailsViewController.h; sourceTree = "<group>"; };
+		6338336818B046E1001CBE12 /* ArticleDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDetailsViewController.m; sourceTree = "<group>"; };
+		6338336A18B05D6C001CBE12 /* GamePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePickerViewController.h; sourceTree = "<group>"; };
+		6338336B18B05D6C001CBE12 /* GamePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePickerViewController.m; sourceTree = "<group>"; };
 		633F7C3E18B0077900DDD58A /* CVAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		633F7C4118B0077900DDD58A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		633F7C4318B0077900DDD58A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -176,8 +182,12 @@
 				633F7CDF18B0211F00DDD58A /* Article.m */,
 				633F7CE118B02C7600DDD58A /* ArticleCell.h */,
 				633F7CE218B02C7600DDD58A /* ArticleCell.m */,
+				6338336718B046E1001CBE12 /* ArticleDetailsViewController.h */,
+				6338336818B046E1001CBE12 /* ArticleDetailsViewController.m */,
 				633F7CDB18B01F3600DDD58A /* ArticlesViewController.h */,
 				633F7CDC18B01F3600DDD58A /* ArticlesViewController.m */,
+				6338336A18B05D6C001CBE12 /* GamePickerViewController.h */,
+				6338336B18B05D6C001CBE12 /* GamePickerViewController.m */,
 				633F7C5918B0077A00DDD58A /* Images.xcassets */,
 				633F7C5318B0077A00DDD58A /* Main.storyboard */,
 				633F7C4818B0077A00DDD58A /* Supporting Files */,
@@ -370,7 +380,9 @@
 			files = (
 				633F7CE018B0211F00DDD58A /* Article.m in Sources */,
 				633F7C5818B0077A00DDD58A /* ViewController.m in Sources */,
+				6338336918B046E1001CBE12 /* ArticleDetailsViewController.m in Sources */,
 				633F7CE318B02C7600DDD58A /* ArticleCell.m in Sources */,
+				6338336C18B05D6C001CBE12 /* GamePickerViewController.m in Sources */,
 				633F7CDD18B01F3600DDD58A /* ArticlesViewController.m in Sources */,
 				633F7C5218B0077A00DDD58A /* AppDelegate.m in Sources */,
 				633F7C4E18B0077A00DDD58A /* main.m in Sources */,
@@ -503,7 +515,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CVAR/CVAR-Prefix.pch";
 				INFOPLIST_FILE = "CVAR/CVAR-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -516,7 +530,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CVAR/CVAR-Prefix.pch";
 				INFOPLIST_FILE = "CVAR/CVAR-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -582,6 +598,7 @@
 				633F7C7218B0077A00DDD58A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		633F7C7318B0077A00DDD58A /* Build configuration list for PBXNativeTarget "CVARTests" */ = {
 			isa = XCConfigurationList;
@@ -590,6 +607,7 @@
 				633F7C7518B0077A00DDD58A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
