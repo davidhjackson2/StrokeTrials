@@ -61,6 +61,7 @@
                                     <outlet property="gameLabel" destination="clS-xU-4Ct" id="DzY-uc-ZtN"/>
                                     <outlet property="nameLabel" destination="h0I-ag-U3d" id="ZN3-9P-CTU"/>
                                     <outlet property="ratingImageView" destination="VkB-w0-AJW" id="HjO-kv-sGK"/>
+                                    <segue destination="gw6-cN-8Vo" kind="push" id="OZx-OD-5xd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -216,6 +217,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ygs-pW-2Vk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1535" y="-671"/>
+        </scene>
+        <!--Article Details View Controller - Article Info-->
+        <scene sceneID="zn8-g8-xjN">
+            <objects>
+                <viewController id="gw6-cN-8Vo" userLabel="Article Details View Controller - Article Info" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3U0-co-Z3E"/>
+                        <viewControllerLayoutGuide type="bottom" id="N0W-3W-Sq5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Ic-7U-bwj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bO3-uw-beI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJV-dz-2hK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1555" y="54"/>
         </scene>
         <!--View Controller - Gestures-->
         <scene sceneID="qSS-Y5-sFQ">
