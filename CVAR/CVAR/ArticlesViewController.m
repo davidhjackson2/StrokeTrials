@@ -59,53 +59,10 @@
     ArticleCell *cell = (ArticleCell *)[tableView dequeueReusableCellWithIdentifier:@"ArticleCell"];
     
     Article *article = (self.articles)[indexPath.row];
-    cell.nameLabel.text = article.name;
-    cell.gameLabel.text = article.game;
-    cell.ratingImageView.image = [self imageForRating:article.rating];
+    cell.acroLabel.text = article.acro;
+    cell.subLabel.text = article.sub;
     
     return cell;
-}
-
-- (UIImage *)imageForRating:(int)rating
-{
-    switch (rating) {
-        case 1: return [UIImage imageNamed:@"1StarSmall"];
-        case 2: return [UIImage imageNamed:@"2StarsSmall"];
-        case 3: return [UIImage imageNamed:@"3StarsSmall"];
-        case 4: return [UIImage imageNamed:@"4StarsSmall"];
-        case 5: return [UIImage imageNamed:@"5StarsSmall"];
-    }
-    return nil;
-}
-
-#pragma mark - ArticleDetailsViewControllerDelegate
-
-- (void)articleDetailsViewControllerDidCancel:(ArticleDetailsViewController *)controller
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)articleDetailsViewControllerDidSave:(ArticleDetailsViewController *)controller
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"AddArticle"]) {
-        
-        UINavigationController *navigationController = segue.destinationViewController;
-        ArticleDetailsViewController *articleDetailsViewController = [navigationController viewControllers][0];
-        articleDetailsViewController.delegate = self;
-    }
-}
-
-- (void)articleDetailsViewController:(ArticleDetailsViewController *)controller didAddArticle:(Article *)article
-{
-    [self.articles addObject:article];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:([self.articles count] - 1) inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

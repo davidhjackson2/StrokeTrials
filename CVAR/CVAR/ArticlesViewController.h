@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ArticleDetailsViewController.h"
 
-@interface ArticlesViewController : UITableViewController <ArticleDetailsViewControllerDelegate>
+@interface ArticlesViewController : UITableViewController
 
 @property (nonatomic, strong) NSMutableArray *articles;
 

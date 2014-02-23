@@ -17,24 +17,56 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    _articles = [NSMutableArray arrayWithCapacity:20];
+    _articles = [NSMutableArray arrayWithCapacity:100];
     
     Article *article = [[Article alloc] init];
-    article.name = @"Bill Evans";
-    article.game = @"Tic-Tac-Toe";
-    article.rating = 4;
+    article.acro = @"ALPHA";
+    article.sub = @"Anything Legion Progress Haven Astounding";
     [_articles addObject:article];
     
     article = [[Article alloc] init];
-    article.name = @"Oscar Peterson";
-    article.game = @"Spin the Bottle";
-    article.rating = 5;
+    article.acro = @"BETA";
+    article.sub = @"Bunker Escaping Traffic Apparatus";
     [_articles addObject:article];
     
     article = [[Article alloc] init];
-    article.name = @"Dave Brubeck";
-    article.game = @"Texas Hold’em Poker";
-    article.rating = 2;
+    article.acro = @"GAMMA";
+    article.sub = @"Goblin Apathetic Memorial Marching Arena";
+    [_articles addObject:article];
+    
+    article = [[Article alloc] init];
+    article.acro = @"DELTA";
+    article.sub = @"Dilemma Entitled Lateral Thought Albino";
+    [_articles addObject:article];
+    
+    article = [[Article alloc] init];
+    article.acro = @"EPSILON";
+    article.sub = @"Entry Possessed Soul Irate Lounge Own Newcomer";
+    [_articles addObject:article];
+    
+    article = [[Article alloc] init];
+    article.acro = @"ZETA";
+    article.sub = @"Zesty Expansion Thingy Addictive";
+    [_articles addObject:article];
+    
+    article = [[Article alloc] init];
+    article.acro = @"ETA";
+    article.sub = @"Execution Turkey Advanced";
+    [_articles addObject:article];
+    
+    article = [[Article alloc] init];
+    article.acro = @"THETA";
+    article.sub = @"Thigh History Egg Town Assuming";
+    [_articles addObject:article];
+    
+    article = [[Article alloc] init];
+    article.acro = @"IOTA";
+    article.sub = @"Incident Outcome Technic Angus";
+    [_articles addObject:article];
+    
+    article = [[Article alloc] init];
+    article.acro = @"KAPPA";
+    article.sub = @"Ketchup Allison Proposal Pepper Ambush";
     [_articles addObject:article];
     
     // Revise this logic if the storyboard is altered

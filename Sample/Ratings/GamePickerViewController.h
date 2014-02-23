@@ -1,9 +1,9 @@
 //
 //  GamePickerViewController.h
-//  CVAR
+//  Ratings
 //
-//  Created by David Jackson on 2/15/14.
-//  Copyright (c) 2014 The Mullets. All rights reserved.
+//  Created by Marin Todorov on 10/9/13.
+//
 //
 
 #import <UIKit/UIKit.h>
@@ -11,7 +11,9 @@
 @class GamePickerViewController;
 
 @protocol GamePickerViewControllerDelegate <NSObject>
-- (void)gamePickerViewController:(GamePickerViewController *)controller didSelectGame:(NSString *)game;
+- (void)gamePickerViewController:
+(GamePickerViewController *)controller
+                   didSelectGame:(NSString *)game;
 @end
 
 @interface GamePickerViewController : UITableViewController

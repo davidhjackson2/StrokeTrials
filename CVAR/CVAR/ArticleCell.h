@@ -10,8 +10,7 @@
 
 @interface ArticleCell : UITableViewCell
 
-@property (nonatomic, weak) IBOutlet UILabel *nameLabel;
-@property (nonatomic, weak) IBOutlet UILabel *gameLabel;
-@property (nonatomic, weak) IBOutlet UIImageView *ratingImageView;
+@property (nonatomic, weak) IBOutlet UILabel *acroLabel;
+@property (nonatomic, weak) IBOutlet UILabel *subLabel;
 
 @end
