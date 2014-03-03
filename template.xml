@@ -1,5 +1,6 @@
 <Articles>
-    <Article id="a1">
+    <Article>
+        <id>a1</id>
         <acro>ACTIVE-A</acro>
         <title>Effect of Clopidogrel Added to Aspirin in Patients with Atrial Fibrillation</title>
         <year>2009</year>
@@ -17,7 +18,8 @@
         <lim>ARR of ischemic stroke only 0.9%, Attributable risk is 0.2% for ICH. This may sway some people to “pick their poison” opting for the minor benefit in ischemic stroke risk reduction at the cost of GI and minor bleeds</lim>
         <thm>In pts w/ Afib not suitable for warfarin, ASA + clopidogrel significantly decreases ischemic stroke risk and significantly increases minor->major bleeding risks compared to ASA monotherapy</thm>
     </Article>
-    <Article id="a2">
+    <Article>
+        <id>a2</id>
         <acro>ACTIVE-W</acro>
         <title>Clopidogrel plus aspirin versus oral anticoagulation for atrial ﬁbrillation in the Atrial ﬁbrillation Clopidogrel Trial with Irbesartan for prevention of Vascular Events</title>
         <year>2006</year>
