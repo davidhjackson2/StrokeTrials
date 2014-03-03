@@ -19,15 +19,25 @@
 {
     _articles = [NSMutableArray arrayWithCapacity:100];
     
-    Article *article = [[Article alloc] init];
-    article.acro = @"ACTIVE-A";
-    article.title = @"Effect of Clopidogrel Added to Aspirin in Patients with Atrial Fibrillation";
-    [_articles addObject:article];
+    Article *a1 = [[Article alloc] init];
+    a1.acro = @"ACTIVE-A";
+    a1.title = @"Effect of Clopidogrel Added to Aspirin in Patients with Atrial Fibrillation";
+    a1.year = @"2009";
+    a1.url = @"http://www.nejm.org/doi/pdf/10.1056/NEJMoa0901301";
+    a1.res = @"randomized, double-blind, multi-center, placebo controlled trial";
+    a1.lim = @"“unsuitable for coumadin” is not clearly defined and introduces potential selection bias";
+    a1.thm = @"In pts w/ Afib not suitable for warfarin, ASA + clopidogrel significantly decreases ischemic stroke risk and significantly increases minor->major bleeding risks compared to ASA monotherapy";
+    [_articles addObject:a1];
     
-    article = [[Article alloc] init];
-    article.acro = @"ACTIVE-W";
-    article.title = @"Clopidogrel plus aspirin versus oral anticoagulation for atrial ﬁbrillation in the Atrial ﬁbrillation Clopidogrel Trial with Irbesartan for prevention of Vascular Events";
-    [_articles addObject:article];
+    Article *a2 = [[Article alloc] init];
+    a2.acro = @"ACTIVE-W";
+    a2.title = @"Clopidogrel plus aspirin versus oral anticoagulation for atrial ﬁbrillation in the Atrial ﬁbrillation Clopidogrel Trial with Irbesartan for prevention of Vascular Events";
+    a2.year = @"2006";
+    a2.url = @"http://www.ncbi.nlm.nih.gov/pubmed/16765759";
+    a2.res = @"randomized, open treatment w/ blinded adjucation of outcomes, controlled trial";
+    a2.lim = @"the study was stopped early because of clear benefit of warfarin over ASA + clopidogrel";
+    a2.thm = @"Warfarin is significantly superior to ASA + clopidogrel for preventing vascular complications in pts w/ Afib (especially non-disabling strokes in those already on anticoagulation) w/ no significant increase in bleeding complications";
+    [_articles addObject:a2];
     
     // Revise this logic if the storyboard is altered
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;

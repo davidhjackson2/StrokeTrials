@@ -24,6 +24,7 @@
 		6378098918BDBD8D00543CB3 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 6378098418BDBD8D00543CB3 /* Article.m */; };
 		6378098A18BDBD8D00543CB3 /* ArticleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6378098618BDBD8D00543CB3 /* ArticleCell.m */; };
 		6378098B18BDBD8D00543CB3 /* ArticlesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6378098818BDBD8D00543CB3 /* ArticlesViewController.m */; };
+		63FC6AD118C1540A00AD4458 /* ArticleDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FC6AD018C1540A00AD4458 /* ArticleDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		6378098618BDBD8D00543CB3 /* ArticleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleCell.m; sourceTree = "<group>"; };
 		6378098718BDBD8D00543CB3 /* ArticlesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticlesViewController.h; sourceTree = "<group>"; };
 		6378098818BDBD8D00543CB3 /* ArticlesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticlesViewController.m; sourceTree = "<group>"; };
+		63FC6ACF18C1540A00AD4458 /* ArticleDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDetailsViewController.h; sourceTree = "<group>"; };
+		63FC6AD018C1540A00AD4458 /* ArticleDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 				6378098418BDBD8D00543CB3 /* Article.m */,
 				6378098518BDBD8D00543CB3 /* ArticleCell.h */,
 				6378098618BDBD8D00543CB3 /* ArticleCell.m */,
+				63FC6ACF18C1540A00AD4458 /* ArticleDetailsViewController.h */,
+				63FC6AD018C1540A00AD4458 /* ArticleDetailsViewController.m */,
 				6378098718BDBD8D00543CB3 /* ArticlesViewController.h */,
 				6378098818BDBD8D00543CB3 /* ArticlesViewController.m */,
 				6378096618BDBCB000543CB3 /* Images.xcassets */,
@@ -269,6 +274,7 @@
 			files = (
 				6378098918BDBD8D00543CB3 /* Article.m in Sources */,
 				6378098B18BDBD8D00543CB3 /* ArticlesViewController.m in Sources */,
+				63FC6AD118C1540A00AD4458 /* ArticleDetailsViewController.m in Sources */,
 				6378096518BDBCB000543CB3 /* ViewController.m in Sources */,
 				6378098A18BDBD8D00543CB3 /* ArticleCell.m in Sources */,
 				6378095F18BDBCB000543CB3 /* AppDelegate.m in Sources */,

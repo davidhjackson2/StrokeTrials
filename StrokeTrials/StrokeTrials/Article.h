@@ -12,5 +12,10 @@
 
 @property (nonatomic, copy) NSString *acro;
 @property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *year;
+@property (nonatomic, copy) NSString *url;
+@property (nonatomic, copy) NSString *res;
+@property (nonatomic, copy) NSString *lim;
+@property (nonatomic, copy) NSString *thm;
 
 @end
