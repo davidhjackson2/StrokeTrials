@@ -1,13 +1,13 @@
 //
-//  Article.m
+//  Trial.m
 //  StrokeTrials
 //
 //  Created by David Jackson on 2/15/14.
 //  Copyright (c) 2014 The Mullets. All rights reserved.
 //
 
-#import "Article.h"
+#import "Trial.h"
 
-@implementation Article
+@implementation Trial
 
 @end

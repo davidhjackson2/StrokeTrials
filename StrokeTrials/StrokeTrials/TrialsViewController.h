@@ -1,5 +1,5 @@
 //
-//  ArticlesViewController.h
+//  TrialsViewController.h
 //  StrokeTrials
 //
 //  Created by David Jackson on 2/15/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ArticlesViewController : UITableViewController
-
-@property (nonatomic, strong) NSMutableArray *articles;
+@interface TrialsViewController : UITableViewController
 
 @end

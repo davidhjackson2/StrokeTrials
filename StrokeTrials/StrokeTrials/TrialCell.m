@@ -1,14 +1,14 @@
 //
-//  ArticleCell.m
+//  TrialCell.m
 //  StrokeTrials
 //
 //  Created by David Jackson on 2/15/14.
 //  Copyright (c) 2014 The Mullets. All rights reserved.
 //
 
-#import "ArticleCell.h"
+#import "TrialCell.h"
 
-@implementation ArticleCell
+@implementation TrialCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -22,7 +22,7 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 
