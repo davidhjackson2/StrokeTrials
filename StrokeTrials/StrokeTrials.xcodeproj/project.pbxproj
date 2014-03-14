@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		633C73A118CFF76600E3C1C7 /* Trials.png in Resources */ = {isa = PBXBuildFile; fileRef = 633C73A018CFF76600E3C1C7 /* Trials.png */; };
+		149AB6BB18CD2EAA0036D28F /* TrialWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149AB6BA18CD2EAA0036D28F /* TrialWebViewController.m */; };
 		6378094F18BDBCB000543CB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6378094E18BDBCB000543CB3 /* Foundation.framework */; };
 		6378095118BDBCB000543CB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6378095018BDBCB000543CB3 /* CoreGraphics.framework */; };
 		6378095318BDBCB000543CB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6378095218BDBCB000543CB3 /* UIKit.framework */; };
@@ -24,6 +24,7 @@
 		6378098A18BDBD8D00543CB3 /* TrialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6378098618BDBD8D00543CB3 /* TrialCell.m */; };
 		6378098B18BDBD8D00543CB3 /* TrialsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6378098818BDBD8D00543CB3 /* TrialsViewController.m */; };
 		63A5FC7F18C6EA7200A0E270 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A5FC7D18C6EA7200A0E270 /* Main.storyboard */; };
+		63C7F47E18D18D5A008A0C4D /* Trials.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C7F47D18D18D5A008A0C4D /* Trials.png */; };
 		63FC6AD118C1540A00AD4458 /* TrialDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FC6AD018C1540A00AD4458 /* TrialDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		633C73A018CFF76600E3C1C7 /* Trials.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trials.png; sourceTree = "<group>"; };
+		149AB6B918CD2EAA0036D28F /* TrialWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrialWebViewController.h; sourceTree = "<group>"; };
+		149AB6BA18CD2EAA0036D28F /* TrialWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrialWebViewController.m; sourceTree = "<group>"; };
 		6378094B18BDBCB000543CB3 /* StrokeTrials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrokeTrials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6378094E18BDBCB000543CB3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6378095018BDBCB000543CB3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,6 +64,7 @@
 		6378098718BDBD8D00543CB3 /* TrialsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrialsViewController.h; sourceTree = "<group>"; };
 		6378098818BDBD8D00543CB3 /* TrialsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrialsViewController.m; sourceTree = "<group>"; };
 		63A5FC7E18C6EA7200A0E270 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63C7F47D18D18D5A008A0C4D /* Trials.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trials.png; sourceTree = "<group>"; };
 		63FC6ACF18C1540A00AD4458 /* TrialDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrialDetailsViewController.h; sourceTree = "<group>"; };
 		63FC6AD018C1540A00AD4458 /* TrialDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrialDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,14 +93,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		633C739F18CFF76600E3C1C7 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				633C73A018CFF76600E3C1C7 /* Trials.png */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
 		6378094218BDBCB000543CB3 = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +128,7 @@
 			children = (
 				6378095D18BDBCB000543CB3 /* AppDelegate.h */,
 				6378095E18BDBCB000543CB3 /* AppDelegate.m */,
-				633C739F18CFF76600E3C1C7 /* Images */,
+				63C7F47C18D18D5A008A0C4D /* Images */,
 				6378096618BDBCB000543CB3 /* Images.xcassets */,
 				63A5FC7D18C6EA7200A0E270 /* Main.storyboard */,
 				6378095518BDBCB000543CB3 /* Supporting Files */,
@@ -145,6 +140,8 @@
 				63FC6AD018C1540A00AD4458 /* TrialDetailsViewController.m */,
 				6378098718BDBD8D00543CB3 /* TrialsViewController.h */,
 				6378098818BDBD8D00543CB3 /* TrialsViewController.m */,
+				149AB6B918CD2EAA0036D28F /* TrialWebViewController.h */,
+				149AB6BA18CD2EAA0036D28F /* TrialWebViewController.m */,
 			);
 			path = StrokeTrials;
 			sourceTree = "<group>";
@@ -176,6 +173,14 @@
 				6378097518BDBCB100543CB3 /* StrokeTrialsTests-Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63C7F47C18D18D5A008A0C4D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				63C7F47D18D18D5A008A0C4D /* Trials.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,7 +227,7 @@
 		6378094318BDBCB000543CB3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "The Mullets";
 				TargetAttributes = {
 					6378094A18BDBCB000543CB3 = {
@@ -257,7 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				633C73A118CFF76600E3C1C7 /* Trials.png in Resources */,
+				63C7F47E18D18D5A008A0C4D /* Trials.png in Resources */,
 				6378096718BDBCB000543CB3 /* Images.xcassets in Resources */,
 				6378095918BDBCB000543CB3 /* InfoPlist.strings in Resources */,
 				63A5FC7F18C6EA7200A0E270 /* Main.storyboard in Resources */,
@@ -281,6 +286,7 @@
 			files = (
 				6378098918BDBD8D00543CB3 /* Trial.m in Sources */,
 				6378098B18BDBD8D00543CB3 /* TrialsViewController.m in Sources */,
+				149AB6BB18CD2EAA0036D28F /* TrialWebViewController.m in Sources */,
 				63FC6AD118C1540A00AD4458 /* TrialDetailsViewController.m in Sources */,
 				6378098A18BDBD8D00543CB3 /* TrialCell.m in Sources */,
 				6378095F18BDBCB000543CB3 /* AppDelegate.m in Sources */,
@@ -338,7 +344,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -367,7 +372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -377,7 +382,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -400,7 +404,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -412,13 +416,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StrokeTrials/StrokeTrials-Prefix.pch";
 				INFOPLIST_FILE = "StrokeTrials/StrokeTrials-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -430,13 +432,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StrokeTrials/StrokeTrials-Prefix.pch";
 				INFOPLIST_FILE = "StrokeTrials/StrokeTrials-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -445,7 +445,6 @@
 		6378098118BDBCB100543CB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StrokeTrials.app/StrokeTrials";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -468,7 +467,6 @@
 		6378098218BDBCB100543CB3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StrokeTrials.app/StrokeTrials";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

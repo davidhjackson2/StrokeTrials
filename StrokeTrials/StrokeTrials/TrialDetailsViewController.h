@@ -2,7 +2,7 @@
 //  TrialDetailsViewController.h
 //  StrokeTrials
 //
-//  Created by David Jackson on 2/28/14.
+//  Created by The Mullets on 2/28/14.
 //  Copyright (c) 2014 The Mullets. All rights reserved.
 //
 
@@ -14,9 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearLabel;
 @property (weak, nonatomic) IBOutlet UILabel *thmLabel;
-@property (weak, nonatomic) IBOutlet UILabel *urlLabel;
-@property (weak, nonatomic) IBOutlet UITextView *resTextView;
-@property (weak, nonatomic) IBOutlet UITextView *limTextView;
+@property (weak, nonatomic) IBOutlet UILabel *resLabel;
+@property (weak, nonatomic) IBOutlet UILabel *limLabel;
 
 @property (nonatomic, strong) Trial *trial;
 
