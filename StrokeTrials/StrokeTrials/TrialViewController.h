@@ -1,5 +1,5 @@
 //
-//  TrialsViewController.h
+//  TrialViewController.h
 //  StrokeTrials
 //
 //  Created by The Mullets on 2/15/14.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Trial.h"
 
-@interface TrialsViewController : UITableViewController <NSXMLParserDelegate> {
+@interface TrialViewController : UITableViewController <NSXMLParserDelegate> {
     NSXMLParser         *parser;
     NSMutableDictionary *xmlTrial;
     Trial               *trial;

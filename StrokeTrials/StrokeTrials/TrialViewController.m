@@ -1,5 +1,5 @@
 //
-//  TrialsViewController.m
+//  TrialViewController.m
 //  StrokeTrials
 //
 //  Created by The Mullets on 2/15/14.
@@ -9,13 +9,13 @@
 #import "Trial.h"
 #import "TrialCell.h"
 #import "TrialDetailsViewController.h"
-#import "TrialsViewController.h"
+#import "TrialViewController.h"
 
-@interface TrialsViewController ()
+@interface TrialViewController ()
 
 @end
 
-@implementation TrialsViewController
+@implementation TrialViewController
 {
     NSMutableArray *trials;
     NSArray *searchResults;
@@ -30,7 +30,7 @@
     [super viewDidLoad];
     
     trials = [[NSMutableArray alloc] init];
-    NSURL *url = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/u/274948931/template.xml"];
+    NSURL *url = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/u/274948931/StrokeTrials.xml"];
     parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
     [parser setDelegate:self];
     [parser setShouldResolveExternalEntities:NO];

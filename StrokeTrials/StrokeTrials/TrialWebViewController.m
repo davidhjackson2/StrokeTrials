@@ -1,5 +1,5 @@
 //
-//  TrailWebViewController.m
+//  TrialWebViewController.m
 //  StrokeTrials
 //
 //  Created by The Mullets on 3/9/14.

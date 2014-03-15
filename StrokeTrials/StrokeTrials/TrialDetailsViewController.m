@@ -7,7 +7,7 @@
 //
 
 #import "TrialDetailsViewController.h"
-#import "TrialsViewController.h"
+#import "TrialViewController.h"
 #import "TrialWebViewController.h"
 
 @interface TrialDetailsViewController ()
