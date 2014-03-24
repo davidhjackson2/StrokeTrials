@@ -6,9 +6,10 @@
 //  Copyright (c) 2014 The Mullets. All rights reserved.
 //
 
+#import "MoreViewController.h"
 #import "Trial.h"
 #import "TrialCell.h"
-#import "TrialDetailsViewController.h"
+#import "TrialDetailViewController.h"
 #import "TrialViewController.h"
 
 @interface TrialViewController ()
@@ -96,12 +97,15 @@
         
         if (self.searchDisplayController.active) {
             indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-            [[segue destinationViewController] setTrial:[[searchResults objectAtIndex:indexPath.row] objectForKey: @"trial"]]; //work?
+            [[segue destinationViewController] setTrial:[[searchResults objectAtIndex:indexPath.row] objectForKey: @"trial"]];
         } else {
             indexPath = [self.tableView indexPathForSelectedRow];
             [[segue destinationViewController] setTrial:[trials[indexPath.row] objectForKey: @"trial"]];
         }
-    }
+    }/*
+    if ([segue.identifier isEqualToString:@"showMore"]) {
+        //MoreViewController *destViewController = segue.destinationViewController;
+    }*/
 }
 
 /*
@@ -146,8 +150,8 @@
         [trial.link appendString:string];
     } else if ([element isEqualToString:@"year"]) {
         [trial.year appendString:string];
-    } else if ([element isEqualToString:@"thm"]) {
-        [trial.thm appendString:string];
+    } else if ([element isEqualToString:@"bl"]) {
+        [trial.bl appendString:string];
     } else if ([element isEqualToString:@"res"]) {
         [trial.res addObject:string];
     } else if ([element isEqualToString:@"lim"]) {

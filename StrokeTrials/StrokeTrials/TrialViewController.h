@@ -10,10 +10,10 @@
 #import "Trial.h"
 
 @interface TrialViewController : UITableViewController <NSXMLParserDelegate> {
-    NSXMLParser         *parser;
+    NSXMLParser *parser;
     NSMutableDictionary *xmlTrial;
-    Trial               *trial;
-    NSString            *element;
+    Trial *trial;
+    NSString *element;
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;

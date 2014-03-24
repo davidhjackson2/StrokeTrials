@@ -1,5 +1,5 @@
 //
-//  TrialDetailsViewController.h
+//  TrialDetailViewController.h
 //  StrokeTrials
 //
 //  Created by The Mullets on 2/28/14.
@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "Trial.h"
 
-@interface TrialDetailsViewController : UIViewController
+@interface TrialDetailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearLabel;
-@property (weak, nonatomic) IBOutlet UILabel *thmLabel;
+@property (weak, nonatomic) IBOutlet UILabel *blLabel;
 @property (weak, nonatomic) IBOutlet UILabel *resLabel;
 @property (weak, nonatomic) IBOutlet UILabel *limLabel;
 

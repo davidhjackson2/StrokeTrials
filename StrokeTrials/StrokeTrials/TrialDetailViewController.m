@@ -1,20 +1,20 @@
 //
-//  TrialDetailsViewController.m
+//  TrialDetailViewController.m
 //  StrokeTrials
 //
 //  Created by The Mullets on 2/28/14.
 //  Copyright (c) 2014 The Mullets. All rights reserved.
 //
 
-#import "TrialDetailsViewController.h"
+#import "TrialDetailViewController.h"
 #import "TrialViewController.h"
 #import "TrialWebViewController.h"
 
-@interface TrialDetailsViewController ()
+@interface TrialDetailViewController ()
 
 @end
 
-@implementation TrialDetailsViewController
+@implementation TrialDetailViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,7 +32,7 @@
     self.navigationController.navigationBar.topItem.title = @"Back";
     self.titleLabel.text = [self.trial.title uppercaseString];
     self.yearLabel.text = self.trial.year;
-    self.thmLabel.text = self.trial.thm;
+    self.blLabel.text = self.trial.bl;
     
     NSMutableString *resText = [NSMutableString string];
     for (NSString* result in self.trial.res) {

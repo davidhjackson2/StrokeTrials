@@ -24,8 +24,11 @@
 		6378098A18BDBD8D00543CB3 /* TrialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6378098618BDBD8D00543CB3 /* TrialCell.m */; };
 		6378098B18BDBD8D00543CB3 /* TrialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6378098818BDBD8D00543CB3 /* TrialViewController.m */; };
 		63A5FC7F18C6EA7200A0E270 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A5FC7D18C6EA7200A0E270 /* Main.storyboard */; };
-		63C7F47E18D18D5A008A0C4D /* Trials.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C7F47D18D18D5A008A0C4D /* Trials.png */; };
-		63FC6AD118C1540A00AD4458 /* TrialDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FC6AD018C1540A00AD4458 /* TrialDetailsViewController.m */; };
+		63C8EC8C18E0CF7D00B2E649 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C8EC8B18E0CF7D00B2E649 /* MoreViewController.m */; };
+		63C8EC9018E0E9C300B2E649 /* About.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C8EC8D18E0E9C300B2E649 /* About.png */; };
+		63C8EC9118E0E9C300B2E649 /* Antithrombotics.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C8EC8E18E0E9C300B2E649 /* Antithrombotics.png */; };
+		63C8EC9218E0E9C300B2E649 /* Feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C8EC8F18E0E9C300B2E649 /* Feedback.png */; };
+		63FC6AD118C1540A00AD4458 /* TrialDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FC6AD018C1540A00AD4458 /* TrialDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +67,13 @@
 		6378098718BDBD8D00543CB3 /* TrialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrialViewController.h; sourceTree = "<group>"; };
 		6378098818BDBD8D00543CB3 /* TrialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrialViewController.m; sourceTree = "<group>"; };
 		63A5FC7E18C6EA7200A0E270 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		63C7F47D18D18D5A008A0C4D /* Trials.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trials.png; sourceTree = "<group>"; };
-		63FC6ACF18C1540A00AD4458 /* TrialDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrialDetailsViewController.h; sourceTree = "<group>"; };
-		63FC6AD018C1540A00AD4458 /* TrialDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrialDetailsViewController.m; sourceTree = "<group>"; };
+		63C8EC8A18E0CF7D00B2E649 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		63C8EC8B18E0CF7D00B2E649 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		63C8EC8D18E0E9C300B2E649 /* About.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = About.png; sourceTree = "<group>"; };
+		63C8EC8E18E0E9C300B2E649 /* Antithrombotics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Antithrombotics.png; sourceTree = "<group>"; };
+		63C8EC8F18E0E9C300B2E649 /* Feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Feedback.png; sourceTree = "<group>"; };
+		63FC6ACF18C1540A00AD4458 /* TrialDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrialDetailViewController.h; sourceTree = "<group>"; };
+		63FC6AD018C1540A00AD4458 /* TrialDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrialDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,13 +138,15 @@
 				63C7F47C18D18D5A008A0C4D /* Images */,
 				6378096618BDBCB000543CB3 /* Images.xcassets */,
 				63A5FC7D18C6EA7200A0E270 /* Main.storyboard */,
+				63C8EC8A18E0CF7D00B2E649 /* MoreViewController.h */,
+				63C8EC8B18E0CF7D00B2E649 /* MoreViewController.m */,
 				6378095518BDBCB000543CB3 /* Supporting Files */,
 				6378098318BDBD8D00543CB3 /* Trial.h */,
 				6378098418BDBD8D00543CB3 /* Trial.m */,
 				6378098518BDBD8D00543CB3 /* TrialCell.h */,
 				6378098618BDBD8D00543CB3 /* TrialCell.m */,
-				63FC6ACF18C1540A00AD4458 /* TrialDetailsViewController.h */,
-				63FC6AD018C1540A00AD4458 /* TrialDetailsViewController.m */,
+				63FC6ACF18C1540A00AD4458 /* TrialDetailViewController.h */,
+				63FC6AD018C1540A00AD4458 /* TrialDetailViewController.m */,
 				6378098718BDBD8D00543CB3 /* TrialViewController.h */,
 				6378098818BDBD8D00543CB3 /* TrialViewController.m */,
 				149AB6B918CD2EAA0036D28F /* TrialWebViewController.h */,
@@ -178,7 +187,9 @@
 		63C7F47C18D18D5A008A0C4D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				63C7F47D18D18D5A008A0C4D /* Trials.png */,
+				63C8EC8D18E0E9C300B2E649 /* About.png */,
+				63C8EC8E18E0E9C300B2E649 /* Antithrombotics.png */,
+				63C8EC8F18E0E9C300B2E649 /* Feedback.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -262,9 +273,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63C7F47E18D18D5A008A0C4D /* Trials.png in Resources */,
 				6378096718BDBCB000543CB3 /* Images.xcassets in Resources */,
+				63C8EC9218E0E9C300B2E649 /* Feedback.png in Resources */,
+				63C8EC9018E0E9C300B2E649 /* About.png in Resources */,
 				6378095918BDBCB000543CB3 /* InfoPlist.strings in Resources */,
+				63C8EC9118E0E9C300B2E649 /* Antithrombotics.png in Resources */,
 				63A5FC7F18C6EA7200A0E270 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,9 +298,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6378098918BDBD8D00543CB3 /* Trial.m in Sources */,
+				63C8EC8C18E0CF7D00B2E649 /* MoreViewController.m in Sources */,
 				6378098B18BDBD8D00543CB3 /* TrialViewController.m in Sources */,
 				149AB6BB18CD2EAA0036D28F /* TrialWebViewController.m in Sources */,
-				63FC6AD118C1540A00AD4458 /* TrialDetailsViewController.m in Sources */,
+				63FC6AD118C1540A00AD4458 /* TrialDetailViewController.m in Sources */,
 				6378098A18BDBD8D00543CB3 /* TrialCell.m in Sources */,
 				6378095F18BDBCB000543CB3 /* AppDelegate.m in Sources */,
 				6378095B18BDBCB000543CB3 /* main.m in Sources */,
