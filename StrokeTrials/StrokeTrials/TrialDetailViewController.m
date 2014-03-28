@@ -19,9 +19,6 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
     return self;
 }
 
@@ -29,7 +26,6 @@
 {
     [super viewDidLoad];
     self.title = self.trial.acro;
-    self.navigationController.navigationBar.topItem.title = @"Back";
     self.titleLabel.text = [self.trial.title uppercaseString];
     self.yearLabel.text = self.trial.year;
     self.blLabel.text = self.trial.bl;
@@ -51,14 +47,9 @@
     self.limLabel.text = limText;
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    self.title = self.trial.acro;
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

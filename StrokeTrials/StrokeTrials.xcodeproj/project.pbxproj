@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		149AB6BB18CD2EAA0036D28F /* TrialWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149AB6BA18CD2EAA0036D28F /* TrialWebViewController.m */; };
+		635A212C18E4F8D600441796 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 635A212B18E4F8D600441796 /* Parser.m */; };
 		6378094F18BDBCB000543CB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6378094E18BDBCB000543CB3 /* Foundation.framework */; };
 		6378095118BDBCB000543CB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6378095018BDBCB000543CB3 /* CoreGraphics.framework */; };
 		6378095318BDBCB000543CB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6378095218BDBCB000543CB3 /* UIKit.framework */; };
@@ -44,6 +45,8 @@
 /* Begin PBXFileReference section */
 		149AB6B918CD2EAA0036D28F /* TrialWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrialWebViewController.h; sourceTree = "<group>"; };
 		149AB6BA18CD2EAA0036D28F /* TrialWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrialWebViewController.m; sourceTree = "<group>"; };
+		635A212A18E4F8D600441796 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
+		635A212B18E4F8D600441796 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
 		6378094B18BDBCB000543CB3 /* StrokeTrials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrokeTrials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6378094E18BDBCB000543CB3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6378095018BDBCB000543CB3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -140,6 +143,8 @@
 				63A5FC7D18C6EA7200A0E270 /* Main.storyboard */,
 				63C8EC8A18E0CF7D00B2E649 /* MoreViewController.h */,
 				63C8EC8B18E0CF7D00B2E649 /* MoreViewController.m */,
+				635A212A18E4F8D600441796 /* Parser.h */,
+				635A212B18E4F8D600441796 /* Parser.m */,
 				6378095518BDBCB000543CB3 /* Supporting Files */,
 				6378098318BDBD8D00543CB3 /* Trial.h */,
 				6378098418BDBD8D00543CB3 /* Trial.m */,
@@ -304,6 +309,7 @@
 				63FC6AD118C1540A00AD4458 /* TrialDetailViewController.m in Sources */,
 				6378098A18BDBD8D00543CB3 /* TrialCell.m in Sources */,
 				6378095F18BDBCB000543CB3 /* AppDelegate.m in Sources */,
+				635A212C18E4F8D600441796 /* Parser.m in Sources */,
 				6378095B18BDBCB000543CB3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

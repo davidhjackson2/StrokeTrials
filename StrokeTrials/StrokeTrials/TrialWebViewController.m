@@ -17,7 +17,6 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:myURL];
     self.navigationItem.title = self.acro;
     [self.webView loadRequest:request];
-    self.navigationController.navigationBar.topItem.title = @"Back";
 }
 
 @end
