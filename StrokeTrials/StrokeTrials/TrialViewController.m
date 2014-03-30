@@ -36,6 +36,9 @@
     [parser setDelegate:self];
     [parser setShouldResolveExternalEntities:NO];
     [parser parse];
+    
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"trial.acro" ascending:YES];
+    [trials sortUsingDescriptors:[NSArray arrayWithObject:sort]];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -102,16 +105,12 @@
             indexPath = [self.tableView indexPathForSelectedRow];
             [[segue destinationViewController] setTrial:[trials[indexPath.row] objectForKey: @"trial"]];
         }
-    }/*
-    if ([segue.identifier isEqualToString:@"showMore"]) {
-        //MoreViewController *destViewController = segue.destinationViewController;
-    }*/
+    }
 }
 
-/*
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
-    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"name contains[c] %@", searchText];
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"trial.title contains[c] %@", searchText];
     searchResults = [trials filteredArrayUsingPredicate:resultPredicate];
 }
 
@@ -124,7 +123,6 @@
     
     return YES;
 }
-*/
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
     element = elementName;

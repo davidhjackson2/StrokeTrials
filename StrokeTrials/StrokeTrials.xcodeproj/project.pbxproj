@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		149AB6BB18CD2EAA0036D28F /* TrialWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149AB6BA18CD2EAA0036D28F /* TrialWebViewController.m */; };
-		635A212C18E4F8D600441796 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 635A212B18E4F8D600441796 /* Parser.m */; };
 		6378094F18BDBCB000543CB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6378094E18BDBCB000543CB3 /* Foundation.framework */; };
 		6378095118BDBCB000543CB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6378095018BDBCB000543CB3 /* CoreGraphics.framework */; };
 		6378095318BDBCB000543CB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6378095218BDBCB000543CB3 /* UIKit.framework */; };
@@ -24,6 +23,7 @@
 		6378098918BDBD8D00543CB3 /* Trial.m in Sources */ = {isa = PBXBuildFile; fileRef = 6378098418BDBD8D00543CB3 /* Trial.m */; };
 		6378098A18BDBD8D00543CB3 /* TrialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6378098618BDBD8D00543CB3 /* TrialCell.m */; };
 		6378098B18BDBD8D00543CB3 /* TrialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6378098818BDBD8D00543CB3 /* TrialViewController.m */; };
+		638B4AA118E8C5DB0098FF34 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638B4AA018E8C5DB0098FF34 /* Main_iPad.storyboard */; };
 		63A5FC7F18C6EA7200A0E270 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A5FC7D18C6EA7200A0E270 /* Main.storyboard */; };
 		63C8EC8C18E0CF7D00B2E649 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C8EC8B18E0CF7D00B2E649 /* MoreViewController.m */; };
 		63C8EC9018E0E9C300B2E649 /* About.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C8EC8D18E0E9C300B2E649 /* About.png */; };
@@ -45,8 +45,6 @@
 /* Begin PBXFileReference section */
 		149AB6B918CD2EAA0036D28F /* TrialWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrialWebViewController.h; sourceTree = "<group>"; };
 		149AB6BA18CD2EAA0036D28F /* TrialWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrialWebViewController.m; sourceTree = "<group>"; };
-		635A212A18E4F8D600441796 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
-		635A212B18E4F8D600441796 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
 		6378094B18BDBCB000543CB3 /* StrokeTrials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrokeTrials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6378094E18BDBCB000543CB3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6378095018BDBCB000543CB3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,6 +67,7 @@
 		6378098618BDBD8D00543CB3 /* TrialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrialCell.m; sourceTree = "<group>"; };
 		6378098718BDBD8D00543CB3 /* TrialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrialViewController.h; sourceTree = "<group>"; };
 		6378098818BDBD8D00543CB3 /* TrialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrialViewController.m; sourceTree = "<group>"; };
+		638B4AA018E8C5DB0098FF34 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		63A5FC7E18C6EA7200A0E270 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63C8EC8A18E0CF7D00B2E649 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		63C8EC8B18E0CF7D00B2E649 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
@@ -141,10 +140,9 @@
 				63C7F47C18D18D5A008A0C4D /* Images */,
 				6378096618BDBCB000543CB3 /* Images.xcassets */,
 				63A5FC7D18C6EA7200A0E270 /* Main.storyboard */,
+				638B4AA018E8C5DB0098FF34 /* Main_iPad.storyboard */,
 				63C8EC8A18E0CF7D00B2E649 /* MoreViewController.h */,
 				63C8EC8B18E0CF7D00B2E649 /* MoreViewController.m */,
-				635A212A18E4F8D600441796 /* Parser.h */,
-				635A212B18E4F8D600441796 /* Parser.m */,
 				6378095518BDBCB000543CB3 /* Supporting Files */,
 				6378098318BDBD8D00543CB3 /* Trial.h */,
 				6378098418BDBD8D00543CB3 /* Trial.m */,
@@ -283,6 +281,7 @@
 				63C8EC9018E0E9C300B2E649 /* About.png in Resources */,
 				6378095918BDBCB000543CB3 /* InfoPlist.strings in Resources */,
 				63C8EC9118E0E9C300B2E649 /* Antithrombotics.png in Resources */,
+				638B4AA118E8C5DB0098FF34 /* Main_iPad.storyboard in Resources */,
 				63A5FC7F18C6EA7200A0E270 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,7 +308,6 @@
 				63FC6AD118C1540A00AD4458 /* TrialDetailViewController.m in Sources */,
 				6378098A18BDBD8D00543CB3 /* TrialCell.m in Sources */,
 				6378095F18BDBCB000543CB3 /* AppDelegate.m in Sources */,
-				635A212C18E4F8D600441796 /* Parser.m in Sources */,
 				6378095B18BDBCB000543CB3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,7 +439,7 @@
 				INFOPLIST_FILE = "StrokeTrials/StrokeTrials-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -457,7 +455,7 @@
 				INFOPLIST_FILE = "StrokeTrials/StrokeTrials-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
