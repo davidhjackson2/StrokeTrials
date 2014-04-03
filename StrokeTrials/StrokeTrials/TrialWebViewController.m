@@ -12,6 +12,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.topItem.title = @"Back";
     NSURL *myURL = [NSURL URLWithString: [self.link stringByAddingPercentEscapesUsingEncoding:
                                           NSUTF8StringEncoding]];
     NSURLRequest *request = [NSURLRequest requestWithURL:myURL];
