@@ -34,7 +34,6 @@ bool specLastChar = false;
     [self.trial.bl deleteCharactersInRange:NSMakeRange([self.trial.bl length]-1, 1)];
     self.blLabel.text = self.trial.bl;
     
-    //res
     NSMutableString *resText = [NSMutableString string];
     for (NSString* result in self.trial.res) {
         if(specLastChar) {
@@ -75,7 +74,7 @@ bool specLastChar = false;
         }
     }
     self.resLabel.text = resText;
-    //lim
+    
     NSMutableString *limText = [NSMutableString string];
     for (NSString* limitation in self.trial.lim) {
         if(specLastChar) {
@@ -116,6 +115,14 @@ bool specLastChar = false;
         }
     }
     self.limLabel.text = limText;
+}
+
+- (IBAction)share:(id)sender
+{
+    NSString *message = @"Check out this article I found using the free Stroke Trials app.";
+    
+    UIActivityViewController *VC = [[UIActivityViewController alloc]initWithActivityItems:[NSArray arrayWithObjects:message, nil] applicationActivities:nil];
+    [self presentViewController:VC animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

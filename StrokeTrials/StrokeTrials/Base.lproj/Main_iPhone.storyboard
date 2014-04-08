@@ -225,7 +225,11 @@
                         </constraints>
                     </scrollView>
                     <navigationItem key="navigationItem" id="2ky-W7-NpC">
-                        <barButtonItem key="rightBarButtonItem" title="Share" id="bgz-o6-lbA"/>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="bgz-o6-lbA">
+                            <connections>
+                                <action selector="share:" destination="Ozd-lY-wGV" id="aLX-3q-hLT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="blLabel" destination="vfe-R1-xwP" id="QdW-tX-8TA"/>
