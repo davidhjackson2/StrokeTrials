@@ -265,7 +265,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="L5a-iS-WLK">
-                        <barButtonItem key="rightBarButtonItem" title="Share" id="PCk-kh-LKa"/>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="PCk-kh-LKa">
+                            <connections>
+                                <action selector="share:" destination="f6X-uG-Qeq" id="SH0-ab-YC7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="webView" destination="qT0-sw-uU5" id="meJ-ee-EXM"/>

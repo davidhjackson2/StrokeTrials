@@ -20,4 +20,12 @@
     [self.webView loadRequest:request];
 }
 
+- (IBAction)share:(id)sender
+{
+    NSString *message = @"Check out this article I found using the free Stroke Trials app.";
+    
+    UIActivityViewController *VC = [[UIActivityViewController alloc]initWithActivityItems:[NSArray arrayWithObjects:message, nil] applicationActivities:nil];
+    [self presentViewController:VC animated:YES completion:nil];
+}
+
 @end

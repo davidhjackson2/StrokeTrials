@@ -25,7 +25,7 @@
 		6378098A18BDBD8D00543CB3 /* TrialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6378098618BDBD8D00543CB3 /* TrialCell.m */; };
 		6378098B18BDBD8D00543CB3 /* TrialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6378098818BDBD8D00543CB3 /* TrialViewController.m */; };
 		638B4AA118E8C5DB0098FF34 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638B4AA018E8C5DB0098FF34 /* Main_iPad.storyboard */; };
-		63A5FC7F18C6EA7200A0E270 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A5FC7D18C6EA7200A0E270 /* Main_iPhone.storyboard */; };
+		63BEA79F18F63FD000C41F0F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63BEA79E18F63FD000C41F0F /* Main_iPhone.storyboard */; };
 		63C8EC8C18E0CF7D00B2E649 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C8EC8B18E0CF7D00B2E649 /* MoreViewController.m */; };
 		63C8EC9018E0E9C300B2E649 /* About.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C8EC8D18E0E9C300B2E649 /* About.png */; };
 		63C8EC9118E0E9C300B2E649 /* Antithrombotics.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C8EC8E18E0E9C300B2E649 /* Antithrombotics.png */; };
@@ -70,7 +70,7 @@
 		6378098718BDBD8D00543CB3 /* TrialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrialViewController.h; sourceTree = "<group>"; };
 		6378098818BDBD8D00543CB3 /* TrialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrialViewController.m; sourceTree = "<group>"; };
 		638B4AA018E8C5DB0098FF34 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
-		63A5FC7E18C6EA7200A0E270 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		63BEA79E18F63FD000C41F0F /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		63C8EC8A18E0CF7D00B2E649 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		63C8EC8B18E0CF7D00B2E649 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		63C8EC8D18E0E9C300B2E649 /* About.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = About.png; sourceTree = "<group>"; };
@@ -86,9 +86,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6378095118BDBCB000543CB3 /* CoreGraphics.framework in Frameworks */,
+				6378094F18BDBCB000543CB3 /* Foundation.framework in Frameworks */,
 				631E74CE18EE037A001668E1 /* MessageUI.framework in Frameworks */,
 				6378095318BDBCB000543CB3 /* UIKit.framework in Frameworks */,
-				6378094F18BDBCB000543CB3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +143,8 @@
 				6378095E18BDBCB000543CB3 /* AppDelegate.m */,
 				63C7F47C18D18D5A008A0C4D /* Images */,
 				6378096618BDBCB000543CB3 /* Images.xcassets */,
-				63A5FC7D18C6EA7200A0E270 /* Main_iPhone.storyboard */,
 				638B4AA018E8C5DB0098FF34 /* Main_iPad.storyboard */,
+				63BEA79E18F63FD000C41F0F /* Main_iPhone.storyboard */,
 				63C8EC8A18E0CF7D00B2E649 /* MoreViewController.h */,
 				63C8EC8B18E0CF7D00B2E649 /* MoreViewController.m */,
 				6378095518BDBCB000543CB3 /* Supporting Files */,
@@ -284,9 +284,9 @@
 				63C8EC9218E0E9C300B2E649 /* Feedback.png in Resources */,
 				63C8EC9018E0E9C300B2E649 /* About.png in Resources */,
 				6378095918BDBCB000543CB3 /* InfoPlist.strings in Resources */,
+				63BEA79F18F63FD000C41F0F /* Main_iPhone.storyboard in Resources */,
 				63C8EC9118E0E9C300B2E649 /* Antithrombotics.png in Resources */,
 				638B4AA118E8C5DB0098FF34 /* Main_iPad.storyboard in Resources */,
-				63A5FC7F18C6EA7200A0E270 /* Main_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,14 +349,6 @@
 				6378097718BDBCB100543CB3 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		63A5FC7D18C6EA7200A0E270 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				63A5FC7E18C6EA7200A0E270 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
