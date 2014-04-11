@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6357F5FB18F5E40A0078F76B /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6357F5FA18F5E40A0078F76B /* LeftViewController.m */; };
+		6366425A18F77493002AEB5A /* TrialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6366425918F77493002AEB5A /* TrialCell.m */; };
 		63BEA7A118F6441B00C41F0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63BEA7A018F6441B00C41F0F /* Images.xcassets */; };
 		F5F5066E169CFC020060B787 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F5066D169CFC020060B787 /* UIKit.framework */; };
 		F5F50670169CFC020060B787 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F5066F169CFC020060B787 /* Foundation.framework */; };
@@ -15,7 +16,7 @@
 		F5F50678169CFC020060B787 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5F50676169CFC020060B787 /* InfoPlist.strings */; };
 		F5F5067A169CFC020060B787 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F50679169CFC020060B787 /* main.m */; };
 		F5F5067E169CFC020060B787 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F5067D169CFC020060B787 /* AppDelegate.m */; };
-		F5F506C3169D06CA0060B787 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F506C2169D06CA0060B787 /* MainStoryboard_iPad.storyboard */; };
+		F5F506C3169D06CA0060B787 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F506C2169D06CA0060B787 /* Main_iPad.storyboard */; };
 		F5F506D3169D16C20060B787 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F506D2169D16C20060B787 /* RightViewController.m */; };
 		F5F506D9169D30610060B787 /* Trial.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F506D8169D30610060B787 /* Trial.m */; };
 /* End PBXBuildFile section */
@@ -23,6 +24,8 @@
 /* Begin PBXFileReference section */
 		6357F5F918F5E40A0078F76B /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		6357F5FA18F5E40A0078F76B /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		6366425818F7748B002AEB5A /* TrialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrialCell.h; sourceTree = "<group>"; };
+		6366425918F77493002AEB5A /* TrialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrialCell.m; sourceTree = "<group>"; };
 		63BEA7A018F6441B00C41F0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F53C4F0A16A22B1D0053D3A6 /* TrialSelectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrialSelectionDelegate.h; sourceTree = "<group>"; };
 		F5F50669169CFC020060B787 /* MathMonsters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathMonsters.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,7 +38,7 @@
 		F5F5067B169CFC020060B787 /* MathMonsters-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MathMonsters-Prefix.pch"; sourceTree = "<group>"; };
 		F5F5067C169CFC020060B787 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F5F5067D169CFC020060B787 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F5F506C2169D06CA0060B787 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		F5F506C2169D06CA0060B787 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		F5F506D1169D16C20060B787 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		F5F506D2169D16C20060B787 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
 		F5F506D7169D30610060B787 /* Trial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trial.h; sourceTree = "<group>"; };
@@ -91,12 +94,14 @@
 				63BEA7A018F6441B00C41F0F /* Images.xcassets */,
 				6357F5F918F5E40A0078F76B /* LeftViewController.h */,
 				6357F5FA18F5E40A0078F76B /* LeftViewController.m */,
-				F5F506C2169D06CA0060B787 /* MainStoryboard_iPad.storyboard */,
+				F5F506C2169D06CA0060B787 /* Main_iPad.storyboard */,
 				F5F506D1169D16C20060B787 /* RightViewController.h */,
 				F5F506D2169D16C20060B787 /* RightViewController.m */,
 				F5F50674169CFC020060B787 /* Supporting Files */,
 				F5F506D7169D30610060B787 /* Trial.h */,
 				F5F506D8169D30610060B787 /* Trial.m */,
+				6366425818F7748B002AEB5A /* TrialCell.h */,
+				6366425918F77493002AEB5A /* TrialCell.m */,
 				F53C4F0A16A22B1D0053D3A6 /* TrialSelectionDelegate.h */,
 			);
 			path = MathMonsters;
@@ -165,7 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5F50678169CFC020060B787 /* InfoPlist.strings in Resources */,
-				F5F506C3169D06CA0060B787 /* MainStoryboard_iPad.storyboard in Resources */,
+				F5F506C3169D06CA0060B787 /* Main_iPad.storyboard in Resources */,
 				63BEA7A118F6441B00C41F0F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +186,7 @@
 				F5F5067E169CFC020060B787 /* AppDelegate.m in Sources */,
 				F5F506D3169D16C20060B787 /* RightViewController.m in Sources */,
 				6357F5FB18F5E40A0078F76B /* LeftViewController.m in Sources */,
+				6366425A18F77493002AEB5A /* TrialCell.m in Sources */,
 				F5F506D9169D30610060B787 /* Trial.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

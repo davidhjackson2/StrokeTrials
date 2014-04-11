@@ -1,5 +1,6 @@
 #import "RightViewController.h"
 #import "Trial.h"
+#import "LeftViewController.h"
 
 @implementation RightViewController
 
@@ -7,6 +8,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -43,6 +46,9 @@
 #pragma mark - New Methods
 -(void)refreshUI
 {
+    
+    //trial = [[_trials objectAtIndex:indexPath.row] objectForKey: @"trial"];
+    
     _acroLabel.text = _trial.acro;
     _titleLabel.text = _trial.title;
 }

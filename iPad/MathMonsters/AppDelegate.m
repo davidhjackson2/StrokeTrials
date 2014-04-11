@@ -18,7 +18,8 @@
         //Grab a reference to the LeftViewController and get the first trial in the list.
         UINavigationController *leftNavController = [splitViewController.viewControllers objectAtIndex:0];
         LeftViewController *leftViewController = (LeftViewController *)[leftNavController topViewController];
-        Trial *firstTrial = [[leftViewController trials] objectAtIndex:0];
+        Trial *firstTrial = [[[leftViewController trials] objectAtIndex:0] objectForKey: @"trial"];
+        //trial = [[_trials objectAtIndex:indexPath.row] objectForKey: @"trial"];
                 
         //Set it as the RightViewController's trial.
         [rightViewController setTrial:firstTrial];

@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
 
-@class Trial;
+#import "Trial.h"
+
 #import "TrialSelectionDelegate.h"
 
 @interface RightViewController : UIViewController <UISplitViewControllerDelegate, TrialSelectionDelegate>

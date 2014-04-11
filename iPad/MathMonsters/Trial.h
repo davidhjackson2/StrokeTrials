@@ -2,10 +2,9 @@
 
 @interface Trial : NSObject
 
-
-@property (nonatomic, strong) NSString *acro;
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *year;
+@property (nonatomic, strong) NSMutableString *acro;
+@property (nonatomic, strong) NSMutableString *title;
+@property (nonatomic, strong) NSMutableString *year;
 
 //@property (nonatomic, strong) NSMutableString *acro;
 //@property (nonatomic, strong) NSMutableString *title;

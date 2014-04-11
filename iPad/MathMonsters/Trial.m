@@ -2,7 +2,18 @@
 
 @implementation Trial
 
-+(Trial *)newTrial:(NSString *)acro title:(NSString *)title year:(NSString *)year
+-(id) init {
+    self.acro = [[NSMutableString alloc] init];
+    self.title = [[NSMutableString alloc] init];
+    self.year = [[NSMutableString alloc] init];
+    self.link = [[NSMutableString alloc] init];
+    self.res = [[NSMutableArray alloc] init];
+    self.lim = [[NSMutableArray alloc] init];
+    self.bl = [[NSMutableString alloc] init];
+    return self;
+}
+
++(Trial *)newTrial:(NSMutableString *)acro title:(NSMutableString *)title year:(NSMutableString *)year
 {
     Trial *trial = [[Trial alloc] init];
     trial.acro = acro;
