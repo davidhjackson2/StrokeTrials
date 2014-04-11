@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		149AB6BB18CD2EAA0036D28F /* TrialWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149AB6BA18CD2EAA0036D28F /* TrialWebViewController.m */; };
+		14F211E418F8282700F53D92 /* SharingActivityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F211E318F8282700F53D92 /* SharingActivityProvider.m */; };
 		631E74CE18EE037A001668E1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631E74CD18EE037A001668E1 /* MessageUI.framework */; };
 		6378094F18BDBCB000543CB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6378094E18BDBCB000543CB3 /* Foundation.framework */; };
 		6378095118BDBCB000543CB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6378095018BDBCB000543CB3 /* CoreGraphics.framework */; };
@@ -46,6 +47,8 @@
 /* Begin PBXFileReference section */
 		149AB6B918CD2EAA0036D28F /* TrialWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrialWebViewController.h; sourceTree = "<group>"; };
 		149AB6BA18CD2EAA0036D28F /* TrialWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrialWebViewController.m; sourceTree = "<group>"; };
+		14F211E218F8282700F53D92 /* SharingActivityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharingActivityProvider.h; sourceTree = "<group>"; };
+		14F211E318F8282700F53D92 /* SharingActivityProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharingActivityProvider.m; sourceTree = "<group>"; };
 		631E74CD18EE037A001668E1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		6378094B18BDBCB000543CB3 /* StrokeTrials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrokeTrials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6378094E18BDBCB000543CB3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -139,6 +142,8 @@
 		6378095418BDBCB000543CB3 /* StrokeTrials */ = {
 			isa = PBXGroup;
 			children = (
+				14F211E218F8282700F53D92 /* SharingActivityProvider.h */,
+				14F211E318F8282700F53D92 /* SharingActivityProvider.m */,
 				6378095D18BDBCB000543CB3 /* AppDelegate.h */,
 				6378095E18BDBCB000543CB3 /* AppDelegate.m */,
 				63C7F47C18D18D5A008A0C4D /* Images */,
@@ -310,6 +315,7 @@
 				6378098B18BDBD8D00543CB3 /* TrialViewController.m in Sources */,
 				149AB6BB18CD2EAA0036D28F /* TrialWebViewController.m in Sources */,
 				63FC6AD118C1540A00AD4458 /* TrialDetailViewController.m in Sources */,
+				14F211E418F8282700F53D92 /* SharingActivityProvider.m in Sources */,
 				6378098A18BDBD8D00543CB3 /* TrialCell.m in Sources */,
 				6378095F18BDBCB000543CB3 /* AppDelegate.m in Sources */,
 				6378095B18BDBCB000543CB3 /* main.m in Sources */,
@@ -430,6 +436,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -439,6 +446,7 @@
 				INFOPLIST_FILE = "StrokeTrials/StrokeTrials-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -450,6 +458,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -459,6 +468,7 @@
 				INFOPLIST_FILE = "StrokeTrials/StrokeTrials-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

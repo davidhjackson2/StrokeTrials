@@ -9,6 +9,8 @@
 #import "TrialDetailViewController.h"
 #import "TrialViewController.h"
 #import "TrialWebViewController.h"
+#import "SharingActivityProvider.h"
+
 
 @interface TrialDetailViewController ()
 
@@ -117,13 +119,35 @@ bool specLastChar = false;
     self.limLabel.text = limText;
 }
 
+//Sharing Functions/////////////////////////////////////////////////////////////////////////////////////////////////////////
 - (IBAction)share:(id)sender
 {
-    NSString *message = @"Check out this article I found using the free Stroke Trials app.";
+    /** NSArray * applicationActivities = nil;
+    //NSArray * activityItems = nil;
+    //activityItems = @[[NSString stringWithFormat: @"http://apple.com"]]; //?
     
-    UIActivityViewController *VC = [[UIActivityViewController alloc]initWithActivityItems:[NSArray arrayWithObjects:message, nil] applicationActivities:nil];
-    [self presentViewController:VC animated:YES completion:nil];
+    UIActivityViewController * activityController = [[UIActivityViewController alloc] initWithActivityItems:@[@"<html><body><b>This is a bold string </b><br\\>Check out this amazing site: <a href='http://apple.com'>Apple</a></body></html>"] applicationActivities:applicationActivities];
+    [activityController setValue:@"Subject Line" forKeyPath:@"subject"];
+
+    
+    activityController.excludedActivityTypes = @[UIActivityTypePostToWeibo, UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll, UIActivityTypePostToTwitter, UIActivityTypeAddToReadingList];
+    
+    activityController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    
+    [self presentViewController:activityController animated:YES completion:nil];**/
+    
+    SharingActivityProvider *sharingActivityProvider = [[SharingActivityProvider alloc] init];
+    NSString *shareString = [NSString stringWithFormat:@"<html><body><br\\>Check out this article I found using the free <a href='http://apple.com'>Stroke Trials</a> iOS app.</br></br><a href='%@'>%@</br></a>%@</body></html>", self.trial.link, self.trial.acro, self.trial.title];
+    NSArray *activityProviders = @[sharingActivityProvider, shareString];
+    UIActivityViewController * activityController = [[UIActivityViewController alloc] initWithActivityItems:activityProviders applicationActivities:nil];
+    [activityController setValue:[NSString stringWithFormat:@"%@", self.trial.acro] forKeyPath:@"subject"];
+    activityController.excludedActivityTypes = @[UIActivityTypePostToWeibo, UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll, UIActivityTypePostToTwitter, UIActivityTypeAddToReadingList, UIActivityTypeMessage, UIActivityTypePostToFacebook];
+    activityController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [self presentViewController:activityController animated:YES completion:nil];
+    
+
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 - (void)didReceiveMemoryWarning
 {
