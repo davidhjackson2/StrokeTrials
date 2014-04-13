@@ -7,12 +7,35 @@
 //
 
 #import "AppDelegate.h"
+#import "LeftViewController.h"
+#import "RightViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    //Figure out that we're on an iPad.
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        //Grab a reference to the UISplitViewController
+        UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+        
+        //Grab a reference to the RightViewController and set it as the SVC's delegate.
+        RightViewController *rightViewController = [splitViewController.viewControllers lastObject];
+        splitViewController.delegate = rightViewController;
+        
+        //Grab a reference to the LeftViewController and get the first trial in the list.
+        UINavigationController *leftNavController = [splitViewController.viewControllers objectAtIndex:0];
+        LeftViewController *leftViewController = (LeftViewController *)[leftNavController topViewController];
+        Trial *firstTrial = [[[leftViewController trials] objectAtIndex:0] objectForKey: @"trial"];
+        //trial = [[_trials objectAtIndex:indexPath.row] objectForKey: @"trial"];
+        
+        //Set it as the RightViewController's trial.
+        [rightViewController setTrial:firstTrial];
+        
+        //Set the RightViewController as the left's delegate.
+        leftViewController.delegate = rightViewController;
+    }
+    
     return YES;
 }
 
