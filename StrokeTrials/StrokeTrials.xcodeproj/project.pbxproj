@@ -33,6 +33,10 @@
 		6378097018BDBCB100543CB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6378095218BDBCB000543CB3 /* UIKit.framework */; };
 		6378097818BDBCB100543CB3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6378097618BDBCB100543CB3 /* InfoPlist.strings */; };
 		6378097A18BDBCB100543CB3 /* StrokeTrialsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6378097918BDBCB100543CB3 /* StrokeTrialsTests.m */; };
+		B1B6C64118FC56D1004BB304 /* AntithromboticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B6C63A18FC56D1004BB304 /* AntithromboticTableViewController.m */; };
+		B1B6C64218FC56D1004BB304 /* AntithromboticTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B6C63C18FC56D1004BB304 /* AntithromboticTableCell.m */; };
+		B1B6C64318FC56D1004BB304 /* AntithromboticDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B6C63E18FC56D1004BB304 /* AntithromboticDetailViewController.m */; };
+		B1B6C64418FC56D1004BB304 /* Antithrombotic.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B6C64018FC56D1004BB304 /* Antithrombotic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +89,14 @@
 		6378097518BDBCB100543CB3 /* StrokeTrialsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StrokeTrialsTests-Info.plist"; sourceTree = "<group>"; };
 		6378097718BDBCB100543CB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6378097918BDBCB100543CB3 /* StrokeTrialsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StrokeTrialsTests.m; sourceTree = "<group>"; };
+		B1B6C63918FC56D1004BB304 /* AntithromboticTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AntithromboticTableViewController.h; sourceTree = "<group>"; };
+		B1B6C63A18FC56D1004BB304 /* AntithromboticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AntithromboticTableViewController.m; sourceTree = "<group>"; };
+		B1B6C63B18FC56D1004BB304 /* AntithromboticTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AntithromboticTableCell.h; sourceTree = "<group>"; };
+		B1B6C63C18FC56D1004BB304 /* AntithromboticTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AntithromboticTableCell.m; sourceTree = "<group>"; };
+		B1B6C63D18FC56D1004BB304 /* AntithromboticDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AntithromboticDetailViewController.h; sourceTree = "<group>"; };
+		B1B6C63E18FC56D1004BB304 /* AntithromboticDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AntithromboticDetailViewController.m; sourceTree = "<group>"; };
+		B1B6C63F18FC56D1004BB304 /* Antithrombotic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Antithrombotic.h; sourceTree = "<group>"; };
+		B1B6C64018FC56D1004BB304 /* Antithrombotic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Antithrombotic.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +208,14 @@
 				6377C3B718FB8300008C98C3 /* TrialCell.m */,
 				6377C3B818FB8300008C98C3 /* TrialWebViewController.h */,
 				6377C3B918FB8300008C98C3 /* TrialWebViewController.m */,
+				B1B6C63918FC56D1004BB304 /* AntithromboticTableViewController.h */,
+				B1B6C63A18FC56D1004BB304 /* AntithromboticTableViewController.m */,
+				B1B6C63B18FC56D1004BB304 /* AntithromboticTableCell.h */,
+				B1B6C63C18FC56D1004BB304 /* AntithromboticTableCell.m */,
+				B1B6C63D18FC56D1004BB304 /* AntithromboticDetailViewController.h */,
+				B1B6C63E18FC56D1004BB304 /* AntithromboticDetailViewController.m */,
+				B1B6C63F18FC56D1004BB304 /* Antithrombotic.h */,
+				B1B6C64018FC56D1004BB304 /* Antithrombotic.m */,
 			);
 			path = StrokeTrials;
 			sourceTree = "<group>";
@@ -334,11 +354,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6377C3AF18FB606E008C98C3 /* LeftViewController.m in Sources */,
+				B1B6C64318FC56D1004BB304 /* AntithromboticDetailViewController.m in Sources */,
+				B1B6C64418FC56D1004BB304 /* Antithrombotic.m in Sources */,
 				6377C3BC18FB8300008C98C3 /* TrialCell.m in Sources */,
 				6377C3BD18FB8300008C98C3 /* TrialWebViewController.m in Sources */,
+				B1B6C64218FC56D1004BB304 /* AntithromboticTableCell.m in Sources */,
 				6377C3A718FB5F31008C98C3 /* AppDelegate.m in Sources */,
 				6377C3B118FB606E008C98C3 /* RightViewController.m in Sources */,
 				6377C3BB18FB8300008C98C3 /* Trial.m in Sources */,
+				B1B6C64118FC56D1004BB304 /* AntithromboticTableViewController.m in Sources */,
 				634E416B18FB108F0044E599 /* TrialDetailViewController.m in Sources */,
 				634E416C18FB108F0044E599 /* TrialViewController.m in Sources */,
 				6378095B18BDBCB000543CB3 /* main.m in Sources */,
