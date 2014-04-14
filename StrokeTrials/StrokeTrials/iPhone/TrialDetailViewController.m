@@ -23,6 +23,10 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    self.navigationItem.title = [NSString stringWithFormat:@"%@", self.trial.acro];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -30,7 +34,6 @@
     self.title = self.trial.acro;
     self.titleLabel.text = [self.trial.title uppercaseString];
     self.yearLabel.text = self.trial.year;
-    [self.trial.bl deleteCharactersInRange:NSMakeRange([self.trial.bl length]-1, 1)];
     self.blLabel.text = self.trial.bl;
     
     NSMutableString *resText = [NSMutableString string];
