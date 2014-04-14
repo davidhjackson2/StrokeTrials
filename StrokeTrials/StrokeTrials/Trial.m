@@ -14,10 +14,10 @@
     self.acro = [[NSMutableString alloc] init];
     self.title = [[NSMutableString alloc] init];
     self.year = [[NSMutableString alloc] init];
-    self.link = [[NSMutableString alloc] init];
+    self.bl = [[NSMutableString alloc] init];
     self.res = [[NSMutableArray alloc] init];
     self.lim = [[NSMutableArray alloc] init];
-    self.bl = [[NSMutableString alloc] init];
+    self.link = [[NSMutableString alloc] init];
     return self;
 }
 

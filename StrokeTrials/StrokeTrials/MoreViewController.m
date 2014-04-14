@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 The Mullets. All rights reserved.
 //
 
-#import <MessageUI/MessageUI.h>
 #import "MoreViewController.h"
 
 @interface MoreViewController () <MFMailComposeViewControllerDelegate>

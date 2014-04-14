@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LeftViewController.h"
+#import "RightViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

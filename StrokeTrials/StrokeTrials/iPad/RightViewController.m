@@ -1,22 +1,31 @@
+//
+//  RightViewController.m
+//  StrokeTrials
+//
+//  Created by The Mullets on 4/11/14.
+//  Copyright (c) 2014 The Mullets. All rights reserved.
+//
+
 #import "RightViewController.h"
-#import "Trial.h"
-#import "LeftViewController.h"
+
+@interface RightViewController () <MFMailComposeViewControllerDelegate>
+
+@end
 
 @implementation RightViewController
+{
+    bool specLastChar;
+}
 
-#pragma mark - View Lifecycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-    //Update the UI to reflect the trial set on initial load.
     [self refreshUI];
 }
 
@@ -24,39 +33,141 @@
 {
     [super didReceiveMemoryWarning];
     
-    // Dispose of any resources that can be recreated, in this case the IBOutlets.
-    [self setAcroLabel:nil];
     [self setTitleLabel:nil];
-    [self setIconImageView:nil];
-    [self setWeaponImageView:nil];
+    [self setYearLabel:nil];
+    [self setBlLabel:nil];
+    [self setResLabel:nil];
+    [self setLimLabel:nil];
 }
 
-#pragma mark - Overridden setters
 -(void)setTrial:(Trial *)trial
 {
-    //Make sure we're not setting up the same trial.
     if (_trial != trial) {
         _trial = trial;
-        
-        //Update the UI to reflect the new trial selected from the list.
         [self refreshUI];
     }
 }
 
-#pragma mark - New Methods
 -(void)refreshUI
 {
+    self.title = self.trial.acro;
+    self.titleLabel.text = [self.trial.title uppercaseString];
+    self.yearLabel.text = self.trial.year;
+    [self.trial.bl deleteCharactersInRange:NSMakeRange([self.trial.bl length]-1, 1)];
+    self.blLabel.text = self.trial.bl;
     
-    //trial = [[_trials objectAtIndex:indexPath.row] objectForKey: @"trial"];
+    NSMutableString *resText = [NSMutableString string];
+    for (NSString* result in self.trial.res) {
+        if(specLastChar) {
+            specLastChar = false;
+            [resText appendFormat:@"%@\n", result];
+        }
+        else {
+            if(![result  isEqual: @"\n"]) {
+                if([result  isEqual: @"<"]) {
+                    [resText length] < 1 ?[resText appendString: @"- "]:[resText deleteCharactersInRange:NSMakeRange([resText length]-1, 1)];
+                    [resText appendString: @"<"];
+                    specLastChar = true;
+                }
+                else if([result  isEqual: @">"]) {
+                    [resText length] < 1 ?[resText appendString: @"- "]:[resText deleteCharactersInRange:NSMakeRange([resText length]-1, 1)];
+                    [resText appendString: @">"];
+                    specLastChar = true;
+                }
+                else if([result  isEqual: @"&"]) {
+                    [resText length] < 1 ?[resText appendString: @"- "]:[resText deleteCharactersInRange:NSMakeRange([resText length]-1, 1)];
+                    [resText appendString: @"&"];
+                    specLastChar = true;
+                }
+                else if([result  isEqual: @"'"]) {
+                    [resText length] < 1 ?[resText appendString: @"- "]:[resText deleteCharactersInRange:NSMakeRange([resText length]-1, 1)];
+                    [resText appendString: @"'"];
+                    specLastChar = true;
+                }
+                else if([result  isEqual: @"\""]) {
+                    [resText length] < 1 ?[resText appendString: @"- "]:[resText deleteCharactersInRange:NSMakeRange([resText length]-1, 1)];
+                    [resText appendString: @"\""];
+                    specLastChar = true;
+                }
+                else {
+                    [resText appendFormat:@"- %@\n", result];
+                }
+            }
+        }
+    }
+    self.resLabel.text = resText;
     
-    _acroLabel.text = _trial.acro;
-    _titleLabel.text = _trial.title;
+    NSMutableString *limText = [NSMutableString string];
+    for (NSString* limitation in self.trial.lim) {
+        if(specLastChar) {
+            specLastChar = false;
+            [limText appendFormat:@"%@\n", limitation];
+        }
+        else {
+            if(![limitation  isEqual: @"\n"]) {
+                if([limitation  isEqual: @"<"]) {
+                    [limText length] < 1 ?[limText appendString: @"- "]:[limText deleteCharactersInRange:NSMakeRange([limText length]-1, 1)];
+                    [limText appendString: @"<"];
+                    specLastChar = true;
+                }
+                else if([limitation isEqual: @">"]) {
+                    [limText length] < 1 ?[limText appendString: @"- "]:[limText deleteCharactersInRange:NSMakeRange([limText length]-1, 1)];
+                    [limText appendString: @">"];
+                    specLastChar = true;
+                }
+                else if([limitation isEqual: @"&"]) {
+                    [limText length] < 1 ?[limText appendString: @"- "]:[limText deleteCharactersInRange:NSMakeRange([limText length]-1, 1)];
+                    [limText appendString: @"&"];
+                    specLastChar = true;
+                }
+                else if([limitation isEqual: @"'"]) {
+                    [limText length] < 1 ?[limText appendString: @"- "]:[limText deleteCharactersInRange:NSMakeRange([limText length]-1, 1)];
+                    [limText appendString: @"'"];
+                    specLastChar = true;
+                }
+                else if([limitation isEqual: @"\""]) {
+                    [limText length] < 1 ?[limText appendString: @"- "]:[limText deleteCharactersInRange:NSMakeRange([limText length]-1, 1)];
+                    [limText appendString: @"\""];
+                    specLastChar = true;
+                }
+                else {
+                    [limText appendFormat:@"- %@\n", limitation];
+                }
+            }
+        }
+    }
+    self.limLabel.text = limText;
 }
 
-#pragma mark - trial Selection Delegate
 -(void)selectedTrial:(Trial *)newTrial
 {
     [self setTrial:newTrial];
+}
+
+- (IBAction)share:(id)sender
+{
+    NSString *subject = self.trial.acro;
+    NSString *messageBody = [NSString stringWithFormat:@"<html><body><br\\>Check out this article I found using the free <a href='https://itunes.apple.com/us/app/acs-trials/id451326968?mt=8'>Stroke Trials</a> iOS app.</br></br><a href='%@'>%@</br></a>%@</body></html>", self.trial.link, self.trial.acro, self.trial.title];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:subject];
+    [mc setMessageBody:messageBody isHTML:true];
+    
+    [self presentViewController:mc animated:YES completion:NULL];
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showLink"]) {
+        [[segue destinationViewController] setAcro:self.trial.acro];
+        [[segue destinationViewController] setLink:self.trial.link];
+        [[segue destinationViewController] setTitle:self.trial.title];
+    }
 }
 
 @end

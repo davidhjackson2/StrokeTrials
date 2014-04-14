@@ -1,37 +1,34 @@
-#import "LeftViewController.h"
-#import "Trial.h"
-#import "TrialCell.h"
+//
+//  LeftViewController.m
+//  StrokeTrials
+//
+//  Created by The Mullets on 4/11/14.
+//  Copyright (c) 2014 The Mullets. All rights reserved.
+//
 
+#import "LeftViewController.h"
 
 @interface LeftViewController ()
 
 @end
 
 @implementation LeftViewController
+{
+    NSArray *searchResults;
+}
 
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
     if (self = [super initWithCoder:aDecoder]) {
-        //Initialize the array of trials for display.
-        _trials = [NSMutableArray array];
+        self.trials = [NSMutableArray array];
         NSURL *url = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/u/274948931/StrokeTrials.xml"];
         parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
         [parser setDelegate:self];
         [parser setShouldResolveExternalEntities:NO];
         [parser parse];
         
-        //NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"trial.acro" ascending:YES];
-        //[_trials sortUsingDescriptors:[NSArray arrayWithObject:sort]];
-        
-        /*
-        //Create trial objects then add them to the array.
-        [_trials addObject:[Trial newTrial:@"Cat-Bot" title:@"MEE-OW" year:@"meetcatbot.png"]];
-        [_trials addObject:[Trial newTrial:@"Dog-Bot" title:@"BOW-WOW" year:@"meetdogbot.png"]];
-        [_trials addObject:[Trial newTrial:@"Explode-Bot" title:@"Tick, tick, BOOM!" year:@"meetexplodebot.png"]];
-        [_trials addObject:[Trial newTrial:@"Fire-Bot" title:@"Will Make You Steamed" year:@"meetfirebot.png"]];
-        [_trials addObject:[Trial newTrial:@"Ice-Bot" title:@"Has A Chilling Effect" year:@"meeticebot.png"]];
-        [_trials addObject:[Trial newTrial:@"Mini-Tomato-Bot" title:@"Extremely Handsome" year:@"meetminitomatobot.png"]];
-         */
+        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"trial.acro" ascending:YES];
+        [self.trials sortUsingDescriptors:[NSArray arrayWithObject:sort]];
     }
     
     return self;
@@ -42,13 +39,14 @@
     [super viewDidLoad];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBar.topItem.title = @"Stroke Trials";
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -57,24 +55,34 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_trials count];
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [searchResults count];
+        
+    } else {
+        return [self.trials count];
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 44;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    Trial *trial;
     static NSString *CellIdentifier = @"TrialCell";
-    TrialCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    TrialCell *cell = (TrialCell *)[self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    /*
-    // Configure the cell...
     if (cell == nil) {
         cell = [[TrialCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    */
     
-    //xmlTrial = [[_trials objectAtIndex:indexPath.row] objectForKey: @"trial"];
-    
-    Trial *trial = [[_trials objectAtIndex:indexPath.row] objectForKey: @"trial"];
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        trial = [[searchResults objectAtIndex:indexPath.row] objectForKey: @"trial"];
+    } else {
+        trial = [[self.trials objectAtIndex:indexPath.row] objectForKey: @"trial"];
+    }
     
     cell.acroLabel.text = trial.acro;
     cell.titleLabel.text = trial.title;
@@ -83,30 +91,51 @@
     return cell;
 }
 
-#pragma mark - Table view delegate
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Trial *selectedTrial = [[_trials objectAtIndex:indexPath.row] objectForKey: @"trial"];
-    if (_delegate) {
-        [_delegate selectedTrial:selectedTrial];
+    Trial *selectedTrial;
+    
+    if (self.searchDisplayController.active) {
+        indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+        selectedTrial = [[searchResults objectAtIndex:indexPath.row] objectForKey: @"trial"];
+    } else {
+        indexPath = [self.tableView indexPathForSelectedRow];
+        selectedTrial = [[self.trials objectAtIndex:indexPath.row] objectForKey: @"trial"];
+    }
+    
+    if (self.delegate) {
+        [self.delegate selectedTrial:selectedTrial];
     }
 }
 
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"trial.title contains[c] %@", searchText];
+    searchResults = [self.trials filteredArrayUsingPredicate:resultPredicate];
+}
 
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString
+                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                                      objectAtIndex:[self.searchDisplayController.searchBar
+                                                     selectedScopeButtonIndex]]];
+    
+    return YES;
+}
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
     element = elementName;
     if ([element isEqualToString:@"trial"]) {
-        xmlDict   = [[NSMutableDictionary alloc] init];
-        xmlTrial  = [[Trial alloc] init];
+        xmlDict = [[NSMutableDictionary alloc] init];
+        xmlTrial = [[Trial alloc] init];
     }
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
     if ([elementName isEqualToString:@"trial"]) {
         [xmlDict setObject:xmlTrial forKey:@"trial"];
-        [_trials addObject:[xmlDict copy]];
+        [self.trials addObject:[xmlDict copy]];
     }
 }
 
@@ -127,9 +156,5 @@
         [xmlTrial.lim addObject:string];
     }
 }
-/*
-- (void)parserDidEndDocument:(NSXMLParser *)parser {
-    [self.tableView reloadData];
-}
-*/
+
 @end

@@ -6,8 +6,11 @@
 //  Copyright (c) 2014 The Mullets. All rights reserved.
 //
 
+#import <MessageUI/MessageUI.h>
 #import <UIKit/UIKit.h>
 #import "Trial.h"
+#import "TrialViewController.h"
+#import "TrialWebViewController.h"
 
 @interface TrialDetailViewController : UIViewController
 

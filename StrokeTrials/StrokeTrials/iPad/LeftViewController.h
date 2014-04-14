@@ -1,6 +1,14 @@
-#import <UIKit/UIKit.h>
+//
+//  LeftViewController.h
+//  StrokeTrials
+//
+//  Created by The Mullets on 4/11/14.
+//  Copyright (c) 2014 The Mullets. All rights reserved.
+//
 
+#import <UIKit/UIKit.h>
 #import "Trial.h"
+#import "TrialCell.h"
 #import "TrialSelectionDelegate.h"
 
 @interface LeftViewController : UITableViewController <NSXMLParserDelegate> {

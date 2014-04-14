@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MoreViewController.h"
 #import "Trial.h"
+#import "TrialCell.h"
+#import "TrialDetailViewController.h"
 
 @interface TrialViewController : UITableViewController <NSXMLParserDelegate> {
     NSXMLParser *parser;
-    NSMutableDictionary *xmlTrial;
-    Trial *trial;
+    NSMutableDictionary *xmlDict;
+    Trial *xmlTrial;
     NSString *element;
 }
 
