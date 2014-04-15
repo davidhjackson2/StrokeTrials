@@ -9,7 +9,11 @@
 #import <MessageUI/MessageUI.h>
 #import <UIKit/UIKit.h>
 
-@interface TrialWebViewController : UIViewController
+@interface TrialWebViewController : UIViewController <UIWebViewDelegate> {
+    IBOutlet UIWebView *webview;
+    IBOutlet UIActivityIndicatorView *activityind;
+    NSTimer *timer;
+}
 
 @property (copy, nonatomic) NSMutableString *acro;
 @property (copy, nonatomic) NSMutableString *link;

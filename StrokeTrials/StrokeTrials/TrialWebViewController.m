@@ -16,11 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    webview.delegate = self;
+    activityind.hidesWhenStopped = YES;
     self.navigationController.navigationBar.topItem.title = @"Back";
     NSURL *myURL = [NSURL URLWithString: [self.link stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSURLRequest *request = [NSURLRequest requestWithURL:myURL];
     self.navigationItem.title = self.acro;
     [self.webView loadRequest:request];
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.5
+                                        target:self
+                                        selector:@selector(loading)
+                                        userInfo:nil
+                                        repeats:YES];
 }
 
 - (IBAction)share:(id)sender
@@ -39,6 +46,24 @@
 - (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+-(void)loading {
+    if (!webview.loading)
+        [activityind stopAnimating];
+    else
+        [activityind startAnimating];
+}
+
+-(void)webViewDidStartLoad:(UIWebView *) webView {
+    
+    [activityind startAnimating];
+    
+}
+
+-(void)webViewDidFinishLoad:(UIWebView *) webView {
+    
+    [activityind stopAnimating];
 }
 
 @end
