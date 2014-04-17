@@ -27,7 +27,7 @@
                         <viewControllerLayoutGuide type="top" id="8Zj-io-PCs"/>
                         <viewControllerLayoutGuide type="bottom" id="jhP-Kz-b6X"/>
                     </layoutGuides>
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="y54-OR-ubs">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" id="y54-OR-ubs">
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -135,6 +135,7 @@
                             <constraint firstAttribute="centerX" secondItem="hKu-RE-ibv" secondAttribute="centerX" id="BZD-8E-Pah"/>
                             <constraint firstAttribute="centerX" secondItem="C8X-cS-6hB" secondAttribute="centerX" id="CSj-aE-j4g"/>
                             <constraint firstItem="FLW-dD-6Nd" firstAttribute="top" secondItem="C8X-cS-6hB" secondAttribute="bottom" constant="8" id="Dgd-ny-43m"/>
+                            <constraint firstItem="jhP-Kz-b6X" firstAttribute="top" secondItem="nf9-fo-jaE" secondAttribute="bottom" constant="17" id="FAL-b9-4Hf"/>
                             <constraint firstAttribute="centerX" secondItem="W1z-iE-TEB" secondAttribute="centerX" id="InM-f0-cds"/>
                             <constraint firstAttribute="centerX" secondItem="FLW-dD-6Nd" secondAttribute="centerX" id="J75-5W-cBp"/>
                             <constraint firstItem="C8X-cS-6hB" firstAttribute="top" secondItem="hKu-RE-ibv" secondAttribute="bottom" constant="8" id="UUh-SR-OZE"/>
@@ -190,7 +191,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="4TB-oe-sqp">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="4TB-oe-sqp">
                                 <rect key="frame" x="341" y="295" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
