@@ -9,8 +9,6 @@
 #import <MessageUI/MessageUI.h>
 #import <UIKit/UIKit.h>
 #import "Trial.h"
-#import "TrialViewController.h"
-#import "TrialWebViewController.h"
 
 @interface TrialDetailViewController : UIViewController
 

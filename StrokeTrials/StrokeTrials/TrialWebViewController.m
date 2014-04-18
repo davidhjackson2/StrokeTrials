@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 The Mullets. All rights reserved.
 //
 
+#import "Reachability.h"
 #import "TrialWebViewController.h"
 
 @interface TrialWebViewController () <MFMailComposeViewControllerDelegate>
@@ -15,8 +16,14 @@
 @implementation TrialWebViewController
 
 - (void)viewDidLoad {
+    Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+    if (networkStatus == NotReachable) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Error" message:@"The Internet connection appears to be offline." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+    
     [super viewDidLoad];
-    self.navigationController.navigationBar.topItem.title = @"Back";
     NSURL *myURL = [NSURL URLWithString: [self.link stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSURLRequest *request = [NSURLRequest requestWithURL:myURL];
     self.navigationItem.title = self.acro;
