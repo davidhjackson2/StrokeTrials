@@ -256,10 +256,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qT0-sw-uU5">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <webView multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" misplaced="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qT0-sw-uU5">
+                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="500" constant="503" id="rJf-MH-u5u"/>
+                                </constraints>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DSK-Wm-GEK">
                                 <rect key="frame" x="150" y="193" width="20" height="20"/>
@@ -267,6 +270,10 @@
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qT0-sw-uU5" firstAttribute="top" secondItem="q7O-ls-vXw" secondAttribute="bottom" id="eUK-r8-iWc"/>
+                            <constraint firstItem="eaE-2R-gA7" firstAttribute="top" secondItem="qT0-sw-uU5" secondAttribute="bottom" id="j1w-r1-Iej"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L5a-iS-WLK">
                         <barButtonItem key="rightBarButtonItem" title="Share" id="PCk-kh-LKa">
@@ -277,7 +284,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityind" destination="DSK-Wm-GEK" id="uZn-vk-Iwg"/>
-                        <outlet property="webView" destination="qT0-sw-uU5" id="meJ-ee-EXM"/>
+                        <outlet property="webview" destination="qT0-sw-uU5" id="6v7-pz-ESa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kfv-Lv-jNU" userLabel="First Responder" sceneMemberID="firstResponder"/>

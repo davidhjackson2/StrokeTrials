@@ -18,6 +18,5 @@
 @property (copy, nonatomic) NSMutableString *acro;
 @property (copy, nonatomic) NSMutableString *link;
 @property (copy, nonatomic) NSMutableString *title;
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
 @end
