@@ -208,7 +208,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityind" destination="4TB-oe-sqp" id="8Cz-NQ-6Oc"/>
-                        <outlet property="webView" destination="cTn-f6-LfS" id="BJP-1Z-vUp"/>
+                        <outlet property="webview" destination="cTn-f6-LfS" id="nZn-cl-gtx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9kj-UV-VZM" userLabel="First Responder" sceneMemberID="firstResponder"/>
