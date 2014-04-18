@@ -7,7 +7,6 @@
 //
 
 #import "AntithromboticViewController.h"
-#import "Reachability.h"
 
 @interface AntithromboticViewController ()
 
@@ -35,7 +34,6 @@
     
     [super viewDidLoad];
     self.navigationController.navigationBar.topItem.title = @"Back";
-    
     /*
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(pullFromNet) forControlEvents:UIControlEventValueChanged];

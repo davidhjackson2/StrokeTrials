@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 The Mullets. All rights reserved.
 //
 
-#import "Reachability.h"
 #import "TrialViewController.h"
 
 @interface TrialViewController ()

@@ -8,8 +8,13 @@
 
 #import <MessageUI/MessageUI.h>
 #import <UIKit/UIKit.h>
+#import "Reachability.h"
 
-@interface TrialWebViewController : UIViewController
+@interface TrialWebViewController : UIViewController <UIWebViewDelegate> {
+    IBOutlet UIWebView *webview;
+    IBOutlet UIActivityIndicatorView *activity;
+    NSTimer *timer;
+}
 
 @property (copy, nonatomic) NSMutableString *acro;
 @property (copy, nonatomic) NSMutableString *link;

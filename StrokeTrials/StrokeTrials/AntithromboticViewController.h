@@ -10,6 +10,7 @@
 #import "Antithrombotic.h"
 #import "AntithromboticCell.h"
 #import "AntithromboticDetailViewController.h"
+#import "Reachability.h"
 
 @interface AntithromboticViewController : UITableViewController <NSXMLParserDelegate> {
     NSXMLParser *parser;
