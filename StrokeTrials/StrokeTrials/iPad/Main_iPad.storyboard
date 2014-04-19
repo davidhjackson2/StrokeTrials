@@ -209,7 +209,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="activity" destination="4TB-oe-sqp" id="8Cz-NQ-6Oc"/>
+                        <outlet property="activityIndicatorView" destination="4TB-oe-sqp" id="8Cz-NQ-6Oc"/>
                         <outlet property="webView" destination="cTn-f6-LfS" id="BJP-1Z-vUp"/>
                     </connections>
                 </viewController>

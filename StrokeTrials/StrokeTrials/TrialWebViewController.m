@@ -27,13 +27,12 @@
         self.navigationController.navigationBar.topItem.title = @"Back";
     }
     
-    webview.delegate = self;
-    activity.hidesWhenStopped = YES;
+    webView.delegate = self;
+    activityIndicatorView.hidesWhenStopped = YES;
     NSURL *myURL = [NSURL URLWithString: [self.link stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSURLRequest *request = [NSURLRequest requestWithURL:myURL];
     self.navigationItem.title = self.acro;
-    [self.webView loadRequest:request];
-    timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(loading) userInfo:nil repeats:YES];
+    [webView loadRequest:request];
 }
 
 - (IBAction)share:(id)sender
@@ -54,19 +53,13 @@
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
--(void)loading {
-    if (!webview.loading)
-        [activity stopAnimating];
-    else
-        [activity startAnimating];
-}
-
--(void)webViewDidStartLoad:(UIWebView *) webView {
-    [activity startAnimating];
+-(void)webViewDidStartLoad:(UIWebView *)webView {
+    [activityIndicatorView startAnimating];
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *) webView {
-    [activity stopAnimating];
+    [activityIndicatorView stopAnimating];
+    activityIndicatorView = nil;
 }
 
 @end

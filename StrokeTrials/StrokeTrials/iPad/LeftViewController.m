@@ -117,7 +117,7 @@
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
-    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"trial.title contains[c] %@", searchText];
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"(trial.title contains[c] %@) || (trial.acro contains[c] %@) || (trial.year contains[c] %@)", searchText, searchText, searchText];
     searchResults = [self.trials filteredArrayUsingPredicate:resultPredicate];
 }
 

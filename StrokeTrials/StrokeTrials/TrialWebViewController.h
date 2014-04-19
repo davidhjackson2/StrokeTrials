@@ -11,14 +11,13 @@
 #import "Reachability.h"
 
 @interface TrialWebViewController : UIViewController <UIWebViewDelegate> {
-    IBOutlet UIWebView *webview;
-    IBOutlet UIActivityIndicatorView *activity;
+    IBOutlet UIWebView *webView;
+    IBOutlet UIActivityIndicatorView *activityIndicatorView;
     NSTimer *timer;
 }
 
 @property (copy, nonatomic) NSMutableString *acro;
 @property (copy, nonatomic) NSMutableString *link;
 @property (copy, nonatomic) NSMutableString *title;
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
 @end
