@@ -33,12 +33,6 @@
     }
     
     [super viewDidLoad];
-    self.navigationController.navigationBar.topItem.title = @"Back";
-    /*
-    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    [refreshControl addTarget:self action:@selector(pullFromNet) forControlEvents:UIControlEventValueChanged];
-    self.refreshControl = refreshControl;
-    */
     antithrombotics = [[NSMutableArray alloc] init];
     NSURL *url = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/u/274948931/Antithrombotics.xml"];
     parser = [[NSXMLParser alloc] initWithContentsOfURL:url];

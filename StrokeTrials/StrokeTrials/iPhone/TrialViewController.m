@@ -33,11 +33,6 @@
     }
     
     [super viewDidLoad];
-    /*
-    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    [refreshControl addTarget:self action:@selector(pullFromNet) forControlEvents:UIControlEventValueChanged];
-    self.refreshControl = refreshControl;
-    */
     trials = [[NSMutableArray alloc] init];
     NSURL *url = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/u/274948931/StrokeTrials.xml"];
     parser = [[NSXMLParser alloc] initWithContentsOfURL:url];

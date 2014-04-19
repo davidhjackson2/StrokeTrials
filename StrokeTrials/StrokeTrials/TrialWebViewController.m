@@ -23,6 +23,10 @@
     }
     
     [super viewDidLoad];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        self.navigationController.navigationBar.topItem.title = @"Back";
+    }
+    
     webview.delegate = self;
     activity.hidesWhenStopped = YES;
     NSURL *myURL = [NSURL URLWithString: [self.link stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
