@@ -1,20 +1,20 @@
 //
-//  TrialViewController.m
+//  AntithromboticViewController.m
 //  StrokeTrials
 //
-//  Created by The Mullets on 2/15/14.
+//  Created by The Mullets on 4/16/14.
 //  Copyright (c) 2014 The Mullets. All rights reserved.
 //
 
-#import "TrialViewController.h"
+#import "AntithromboticViewController.h"
 
-@interface TrialViewController ()
+@interface AntithromboticViewController ()
 
 @end
 
-@implementation TrialViewController
+@implementation AntithromboticViewController
 {
-    NSMutableArray *trials;
+    NSMutableArray *antithrombotics;
     NSArray *searchResults;
 }
 
@@ -33,19 +33,15 @@
     }
     
     [super viewDidLoad];
-    trials = [[NSMutableArray alloc] init];
-    NSURL *url = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/u/274948931/StrokeTrials.xml"];
+    antithrombotics = [[NSMutableArray alloc] init];
+    NSURL *url = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/u/274948931/Antithrombotics.xml"];
     parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
     [parser setDelegate:self];
     [parser setShouldResolveExternalEntities:NO];
     [parser parse];
     
-    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"trial.acro" ascending:YES];
-    [trials sortUsingDescriptors:[NSArray arrayWithObject:sort]];
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    self.navigationController.navigationBar.topItem.title = @"Stroke Trials";
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"antithrombotic.name" ascending:YES];
+    [antithrombotics sortUsingDescriptors:[NSArray arrayWithObject:sort]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,7 +59,7 @@
         return [searchResults count];
         
     } else {
-        return [trials count];
+        return [antithrombotics count];
     }
 }
 
@@ -74,45 +70,43 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Trial *trial;
-    static NSString *CellIdentifier = @"TrialCell";
-    TrialCell *cell = (TrialCell *)[self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    Antithrombotic *antithrombotic;
+    static NSString *CellIdentifier = @"AntithromboticCell";
+    AntithromboticCell *cell = (AntithromboticCell *)[self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
-        cell = [[TrialCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[AntithromboticCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     if (tableView == self.searchDisplayController.searchResultsTableView) {
-        trial = [[searchResults objectAtIndex:indexPath.row] objectForKey: @"trial"];
+        antithrombotic = [[searchResults objectAtIndex:indexPath.row] objectForKey: @"antithrombotic"];
     } else {
-        trial = [[trials objectAtIndex:indexPath.row] objectForKey: @"trial"];
+        antithrombotic = [[antithrombotics objectAtIndex:indexPath.row] objectForKey: @"antithrombotic"];
     }
     
-    cell.acroLabel.text = trial.acro;
-    cell.titleLabel.text = trial.title;
-    cell.yearLabel.text = [NSString stringWithFormat:@"'%@", [trial.year substringFromIndex:2]];
+    cell.nameLabel.text = antithrombotic.name;
     
     return cell;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showTrialDetail"]) {
+    if ([segue.identifier isEqualToString:@"showAntithromboticDetail"]) {
         NSIndexPath *indexPath = nil;
         
         if (self.searchDisplayController.active) {
             indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-            [[segue destinationViewController] setTrial:[[searchResults objectAtIndex:indexPath.row] objectForKey: @"trial"]];
+            [[segue destinationViewController] setAntithrombotic:[[searchResults objectAtIndex:indexPath.row] objectForKey: @"antithrombotic"]];
         } else {
             indexPath = [self.tableView indexPathForSelectedRow];
-            [[segue destinationViewController] setTrial:[trials[indexPath.row] objectForKey: @"trial"]];
-        }
+            [[segue destinationViewController] setAntithrombotic:[antithrombotics[indexPath.row] objectForKey: @"antithrombotic"]];
+       }
     }
 }
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
-    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"(trial.title contains[c] %@) || (trial.acro contains[c] %@) || (trial.year contains[c] %@)", searchText, searchText, searchText];
-    searchResults = [trials filteredArrayUsingPredicate:resultPredicate];
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"antithrombotic.name contains[c] %@", searchText];
+    searchResults = [antithrombotics filteredArrayUsingPredicate:resultPredicate];
 }
 
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
@@ -127,34 +121,24 @@
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
     element = elementName;
-    if ([element isEqualToString:@"trial"]) {
+    if ([element isEqualToString:@"antithrombotic"]) {
         xmlDict = [[NSMutableDictionary alloc] init];
-        xmlTrial = [[Trial alloc] init];
+        xmlAntithrombotic = [[Antithrombotic alloc] init];
     }
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
-    if ([elementName isEqualToString:@"trial"]) {
-        [xmlDict setObject:xmlTrial forKey:@"trial"];
-        [trials addObject:[xmlDict copy]];
+    if ([elementName isEqualToString:@"antithrombotic"]) {
+        [xmlDict setObject:xmlAntithrombotic forKey:@"antithrombotic"];
+        [antithrombotics addObject:[xmlDict copy]];
     }
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
-    if ([element isEqualToString:@"acro"]) {
-        [xmlTrial.acro appendString:string];
-    } else if ([element isEqualToString:@"title"]) {
-        [xmlTrial.title appendString:string];
-    } else if ([element isEqualToString:@"link"]) {
-        [xmlTrial.link appendString:string];
-    } else if ([element isEqualToString:@"year"]) {
-        [xmlTrial.year appendString:string];
-    } else if ([element isEqualToString:@"bl"]) {
-        [xmlTrial.bl appendString:string];
-    } else if ([element isEqualToString:@"res"]) {
-        [xmlTrial.res addObject:string];
-    } else if ([element isEqualToString:@"lim"]) {
-        [xmlTrial.lim addObject:string];
+    if ([element isEqualToString:@"name"]) {
+        [xmlAntithrombotic.name appendString:string];
+    } else if ([element isEqualToString:@"content"]) {
+        [xmlAntithrombotic.content appendString:string];
     }
 }
 
