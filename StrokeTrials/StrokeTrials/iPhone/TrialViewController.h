@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "MoreViewController.h"
-#import "Reachability.h"
 #import "Trial.h"
 #import "TrialCell.h"
 #import "TrialDetailViewController.h"
