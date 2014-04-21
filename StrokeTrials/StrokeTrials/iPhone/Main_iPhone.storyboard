@@ -404,7 +404,7 @@
                         <viewControllerLayoutGuide type="top" id="5nW-8U-1ZW"/>
                         <viewControllerLayoutGuide type="bottom" id="YjZ-X7-hHo"/>
                     </layoutGuides>
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="jxF-Ln-abb">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="jxF-Ln-abb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -490,13 +490,16 @@
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="adc-VM-gbD" secondAttribute="centerX" id="0lf-5W-Y3g"/>
                             <constraint firstItem="eAz-sr-lgY" firstAttribute="top" secondItem="abF-He-CMv" secondAttribute="bottom" constant="36" id="2CO-Gt-hNR"/>
+                            <constraint firstAttribute="trailing" secondItem="WCK-gQ-vCy" secondAttribute="trailing" constant="10" id="51e-hZ-bpt"/>
                             <constraint firstItem="XKQ-Ek-M9V" firstAttribute="top" secondItem="r7j-26-Mwc" secondAttribute="bottom" constant="8" id="6HV-Ne-EJw"/>
                             <constraint firstAttribute="centerX" secondItem="uDU-LX-3xH" secondAttribute="centerX" id="Atr-es-dI6"/>
                             <constraint firstAttribute="centerX" secondItem="eAz-sr-lgY" secondAttribute="centerX" id="B56-kv-MxP"/>
                             <constraint firstItem="r7j-26-Mwc" firstAttribute="top" secondItem="adc-VM-gbD" secondAttribute="bottom" constant="8" id="CFn-yR-w7o"/>
                             <constraint firstAttribute="centerX" secondItem="XKQ-Ek-M9V" secondAttribute="centerX" id="Eh4-hW-PUz"/>
+                            <constraint firstItem="WCK-gQ-vCy" firstAttribute="leading" secondItem="jxF-Ln-abb" secondAttribute="leading" constant="10" id="O2O-Fd-ZDK"/>
                             <constraint firstItem="adc-VM-gbD" firstAttribute="top" secondItem="uDU-LX-3xH" secondAttribute="bottom" constant="8" id="QTl-Xx-98Y"/>
                             <constraint firstAttribute="centerX" secondItem="abF-He-CMv" secondAttribute="centerX" id="VCB-dj-2fP"/>
+                            <constraint firstItem="YjZ-X7-hHo" firstAttribute="top" secondItem="XKQ-Ek-M9V" secondAttribute="bottom" constant="234" id="XtZ-Vd-zmR"/>
                             <constraint firstItem="uDU-LX-3xH" firstAttribute="top" secondItem="eAz-sr-lgY" secondAttribute="bottom" constant="17" id="bYs-2T-Juu"/>
                             <constraint firstAttribute="centerX" secondItem="r7j-26-Mwc" secondAttribute="centerX" id="f0O-oD-JVk"/>
                             <constraint firstItem="abF-He-CMv" firstAttribute="top" secondItem="WCK-gQ-vCy" secondAttribute="bottom" constant="26" id="fEY-T0-zF4"/>

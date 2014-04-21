@@ -104,7 +104,7 @@
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
-    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"(trial.title contains[c] %@) || (trial.acro contains[c] %@) || (trial.year contains[c] %@)", searchText, searchText, searchText];
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"(trial.title contains[c] %@) || (trial.acro contains[c] %@) || (trial.year contains[c] %@) || (trial.tags contains[c] %@)", searchText, searchText, searchText, searchText];
     //resultPredicate = [NSPredicate predicateWithFormat:@""]
     searchResults = [trials filteredArrayUsingPredicate:resultPredicate];
 }
@@ -149,6 +149,8 @@
         [xmlTrial.res addObject:string];
     } else if ([element isEqualToString:@"lim"]) {
         [xmlTrial.lim addObject:string];
+    } else if ([element isEqualToString:@"tag"]) {
+        [xmlTrial.tags appendString:string];
     }
 }
 
