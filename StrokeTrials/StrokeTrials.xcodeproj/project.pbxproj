@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14ED31A61904C9A100DB6C13 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ED31A51904C9A100DB6C13 /* AboutUsViewController.m */; };
 		631E74CE18EE037A001668E1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631E74CD18EE037A001668E1 /* MessageUI.framework */; };
 		634E414618FB107E0044E599 /* About.png in Resources */ = {isa = PBXBuildFile; fileRef = 634E414218FB107E0044E599 /* About.png */; };
 		634E414718FB107E0044E599 /* Antithrombotics.png in Resources */ = {isa = PBXBuildFile; fileRef = 634E414318FB107E0044E599 /* Antithrombotics.png */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14ED31A41904C9A100DB6C13 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		14ED31A51904C9A100DB6C13 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
 		631E74CD18EE037A001668E1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		634E414218FB107E0044E599 /* About.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = About.png; sourceTree = "<group>"; };
 		634E414318FB107E0044E599 /* Antithrombotics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Antithrombotics.png; sourceTree = "<group>"; };
@@ -201,6 +204,8 @@
 				634E415818FB108F0044E599 /* iPhone */,
 				6377C3B218FB8300008C98C3 /* MoreViewController.h */,
 				6377C3B318FB8300008C98C3 /* MoreViewController.m */,
+				14ED31A41904C9A100DB6C13 /* AboutUsViewController.h */,
+				14ED31A51904C9A100DB6C13 /* AboutUsViewController.m */,
 				6378095518BDBCB000543CB3 /* Supporting Files */,
 				6377C3B418FB8300008C98C3 /* Trial.h */,
 				6377C3B518FB8300008C98C3 /* Trial.m */,
@@ -358,6 +363,7 @@
 				B1B6C64418FC56D1004BB304 /* Antithrombotic.m in Sources */,
 				6377C3BC18FB8300008C98C3 /* TrialCell.m in Sources */,
 				6377C3BD18FB8300008C98C3 /* TrialWebViewController.m in Sources */,
+				14ED31A61904C9A100DB6C13 /* AboutUsViewController.m in Sources */,
 				B1B6C64218FC56D1004BB304 /* AntithromboticTableCell.m in Sources */,
 				6377C3A718FB5F31008C98C3 /* AppDelegate.m in Sources */,
 				6377C3B118FB606E008C98C3 /* RightViewController.m in Sources */,

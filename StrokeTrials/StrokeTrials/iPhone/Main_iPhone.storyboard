@@ -396,10 +396,10 @@
             </objects>
             <point key="canvasLocation" x="-1216" y="-837"/>
         </scene>
-        <!--Trial Detail View Controller - Trial Detail View Controller-->
+        <!--About Us View Controller - Trial Detail View Controller-->
         <scene sceneID="rdb-mU-6nM">
             <objects>
-                <viewController title="Trial Detail View Controller" id="cO9-Ku-Dj0" customClass="TrialDetailViewController" sceneMemberID="viewController">
+                <viewController title="Trial Detail View Controller" id="cO9-Ku-Dj0" customClass="AboutUsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5nW-8U-1ZW"/>
                         <viewControllerLayoutGuide type="bottom" id="YjZ-X7-hHo"/>
@@ -408,7 +408,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="INSPIRATION" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="WCK-gQ-vCy">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="INSPIRATION" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="WCK-gQ-vCy">
                                 <rect key="frame" x="10" y="93" width="300" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -419,8 +419,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" misplaced="YES" text="Ali Saad, MD" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="145" translatesAutoresizingMaskIntoConstraints="NO" id="abF-He-CMv">
-                                <rect key="frame" x="88" y="136" width="145" height="20"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Ali Saad, MD" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="abF-He-CMv">
+                                <rect key="frame" x="10" y="136" width="300" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="01R-HX-BQM"/>
@@ -430,7 +430,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="PROGRAMMERS" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="eAz-sr-lgY">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROGRAMMERS" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="eAz-sr-lgY">
                                 <rect key="frame" x="10" y="192" width="300" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -441,8 +441,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" misplaced="YES" text="David Jackson" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="145" translatesAutoresizingMaskIntoConstraints="NO" id="uDU-LX-3xH">
-                                <rect key="frame" x="85" y="230" width="145" height="20"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="David Jackson" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="uDU-LX-3xH">
+                                <rect key="frame" x="10" y="230" width="300" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="GMs-Gk-u7t"/>
@@ -452,8 +452,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" misplaced="YES" text="Brenden Leonard" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="145" translatesAutoresizingMaskIntoConstraints="NO" id="adc-VM-gbD">
-                                <rect key="frame" x="85" y="258" width="145" height="20"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Brenden Leonard" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="adc-VM-gbD">
+                                <rect key="frame" x="10" y="258" width="300" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="K2U-4R-p00"/>
@@ -463,8 +463,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" misplaced="YES" text="Harrison English" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="145" translatesAutoresizingMaskIntoConstraints="NO" id="r7j-26-Mwc">
-                                <rect key="frame" x="85" y="286" width="145" height="20"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Harrison English" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="r7j-26-Mwc">
+                                <rect key="frame" x="10" y="286" width="300" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="aDK-hQ-jeG"/>
@@ -474,8 +474,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" misplaced="YES" text="Blaise Hymel" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="145" translatesAutoresizingMaskIntoConstraints="NO" id="XKQ-Ek-M9V">
-                                <rect key="frame" x="85" y="314" width="145" height="20"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Blaise Hymel" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="XKQ-Ek-M9V">
+                                <rect key="frame" x="10" y="314" width="300" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="7i0-FC-j3U"/>
@@ -487,10 +487,26 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="adc-VM-gbD" secondAttribute="centerX" id="0lf-5W-Y3g"/>
+                            <constraint firstItem="eAz-sr-lgY" firstAttribute="top" secondItem="abF-He-CMv" secondAttribute="bottom" constant="36" id="2CO-Gt-hNR"/>
+                            <constraint firstItem="XKQ-Ek-M9V" firstAttribute="top" secondItem="r7j-26-Mwc" secondAttribute="bottom" constant="8" id="6HV-Ne-EJw"/>
+                            <constraint firstAttribute="centerX" secondItem="uDU-LX-3xH" secondAttribute="centerX" id="Atr-es-dI6"/>
+                            <constraint firstAttribute="centerX" secondItem="eAz-sr-lgY" secondAttribute="centerX" id="B56-kv-MxP"/>
+                            <constraint firstItem="r7j-26-Mwc" firstAttribute="top" secondItem="adc-VM-gbD" secondAttribute="bottom" constant="8" id="CFn-yR-w7o"/>
+                            <constraint firstAttribute="centerX" secondItem="XKQ-Ek-M9V" secondAttribute="centerX" id="Eh4-hW-PUz"/>
+                            <constraint firstItem="adc-VM-gbD" firstAttribute="top" secondItem="uDU-LX-3xH" secondAttribute="bottom" constant="8" id="QTl-Xx-98Y"/>
+                            <constraint firstAttribute="centerX" secondItem="abF-He-CMv" secondAttribute="centerX" id="VCB-dj-2fP"/>
+                            <constraint firstItem="uDU-LX-3xH" firstAttribute="top" secondItem="eAz-sr-lgY" secondAttribute="bottom" constant="17" id="bYs-2T-Juu"/>
+                            <constraint firstAttribute="centerX" secondItem="r7j-26-Mwc" secondAttribute="centerX" id="f0O-oD-JVk"/>
+                            <constraint firstItem="abF-He-CMv" firstAttribute="top" secondItem="WCK-gQ-vCy" secondAttribute="bottom" constant="26" id="fEY-T0-zF4"/>
+                            <constraint firstAttribute="centerX" secondItem="WCK-gQ-vCy" secondAttribute="centerX" id="nXY-eF-zsc"/>
+                            <constraint firstItem="WCK-gQ-vCy" firstAttribute="top" secondItem="5nW-8U-1ZW" secondAttribute="top" constant="29" id="wwS-kl-ldZ"/>
+                        </constraints>
                     </scrollView>
-                    <navigationItem key="navigationItem" id="zQ5-yJ-oVs"/>
+                    <navigationItem key="navigationItem" title="About Us" id="zQ5-yJ-oVs"/>
                     <connections>
-                        <outlet property="view" destination="jxF-Ln-abb" id="b08-qT-jRe"/>
+                        <outlet property="view" destination="jxF-Ln-abb" id="adL-5g-m7P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21b-MB-Lda" userLabel="First Responder" sceneMemberID="firstResponder"/>
