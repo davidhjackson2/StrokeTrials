@@ -1,18 +1,18 @@
 //
-//  AboutUsViewController.m
+//  AboutViewController.m
 //  StrokeTrials
 //
-//  Created by Brenden Leonard on 4/20/14.
+//  Created by The Mullets on 4/20/14.
 //  Copyright (c) 2014 The Mullets. All rights reserved.
 //
 
-#import "AboutUsViewController.h"
+#import "AboutViewController.h"
 
-@interface AboutUsViewController ()
+@interface AboutViewController ()
 
 @end
 
-@implementation AboutUsViewController
+@implementation AboutViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,7 +35,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -44,6 +43,5 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
 @end

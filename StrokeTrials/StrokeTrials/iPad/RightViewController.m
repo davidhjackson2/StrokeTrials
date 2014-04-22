@@ -50,6 +50,7 @@
 
 -(void)refreshUI
 {
+    self.navigationController.navigationBar.topItem.title = @"Back";
     self.title = self.trial.acro;
     self.titleLabel.text = [self.trial.title uppercaseString];
     self.yearLabel.text = self.trial.year;

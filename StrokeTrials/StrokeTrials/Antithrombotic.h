@@ -1,17 +1,16 @@
 //
 //  Antithrombotic.h
-//  AntithromboticApp
+//  StrokeTrials
 //
-//  Created by Simon on 25/12/13.
-//  Copyright (c) 2013 Appcoda. All rights reserved.
+//  Created by The Mullets on 4/16/14.
+//  Copyright (c) 2014 The Mullets. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 @interface Antithrombotic : NSObject
 
-@property (nonatomic, strong) NSString *name; // name of Antithrombotic
-@property (nonatomic, strong) NSString *lname; // preparation time
-@property (nonatomic, strong) NSString *ingredients; // ingredients of Antithrombotic
+@property (nonatomic, strong) NSMutableString *name;
+@property (nonatomic, strong) NSMutableString *content;
 
 @end

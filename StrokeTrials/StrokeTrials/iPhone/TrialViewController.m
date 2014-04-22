@@ -23,9 +23,16 @@
     [super awakeFromNib];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewDidLoad
+{
+    Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+    if (networkStatus == NotReachable) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Error" message:@"The Internet connection appears to be offline." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
     
+    [super viewDidLoad];
     trials = [[NSMutableArray alloc] init];
     NSURL *url = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/u/274948931/StrokeTrials.xml"];
     parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
@@ -105,7 +112,6 @@
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
     NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"(trial.title contains[c] %@) || (trial.acro contains[c] %@) || (trial.year contains[c] %@) || (trial.tags contains[c] %@)", searchText, searchText, searchText, searchText];
-    //resultPredicate = [NSPredicate predicateWithFormat:@""]
     searchResults = [trials filteredArrayUsingPredicate:resultPredicate];
 }
 

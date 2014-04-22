@@ -15,14 +15,24 @@
 @implementation TrialWebViewController
 
 - (void)viewDidLoad {
+    Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+    if (networkStatus == NotReachable) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Error" message:@"The Internet connection appears to be offline." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+    
     [super viewDidLoad];
-    webview.delegate = self;
-    activityind.hidesWhenStopped = YES;
-    self.navigationController.navigationBar.topItem.title = @"Back";
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        self.navigationController.navigationBar.topItem.title = @"Back";
+    }
+    
+    webView.delegate = self;
+    activityIndicatorView.hidesWhenStopped = YES;
     NSURL *myURL = [NSURL URLWithString: [self.link stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSURLRequest *request = [NSURLRequest requestWithURL:myURL];
     self.navigationItem.title = self.acro;
-    [webview loadRequest:request];
+    [webView loadRequest:request];
 }
 
 - (IBAction)share:(id)sender
@@ -43,17 +53,13 @@
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
-
--(void)webViewDidStartLoad:(UIWebView *) webview {
-    
-    [activityind startAnimating];
-    
+-(void)webViewDidStartLoad:(UIWebView *)webView {
+    [activityIndicatorView startAnimating];
 }
 
--(void)webViewDidFinishLoad:(UIWebView *) webview {
-    
-    [activityind stopAnimating];
-    activityind = nil;
+-(void)webViewDidFinishLoad:(UIWebView *) webView {
+    [activityIndicatorView stopAnimating];
+    activityIndicatorView = nil;
 }
 
 @end

@@ -119,7 +119,7 @@
                                     <constraint firstAttribute="width" constant="200" id="dzY-cB-pDG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Original Trial">
+                                <state key="normal" title="Original Article">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -127,7 +127,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="contentStretch" x="0.0" y="0.050000000000000003" width="1" height="1"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="xSh-jt-HAh" secondAttribute="centerX" id="1PY-2I-K4C"/>
                             <constraint firstItem="39d-op-H7C" firstAttribute="top" secondItem="ZNq-MJ-GM9" secondAttribute="bottom" constant="8" id="481-3H-Fne"/>
@@ -200,6 +201,7 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ng5-rY-Inc">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="fcQ-k2-jP2"/>
                         <barButtonItem key="rightBarButtonItem" title="Share" id="KkL-si-uUY">
                             <connections>
                                 <action selector="share:" destination="JfI-ik-Vxo" id="tYJ-Ij-Erd"/>
@@ -207,8 +209,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="activityind" destination="4TB-oe-sqp" id="8Cz-NQ-6Oc"/>
-                        <outlet property="webview" destination="cTn-f6-LfS" id="nZn-cl-gtx"/>
+                        <outlet property="activityIndicatorView" destination="4TB-oe-sqp" id="8Cz-NQ-6Oc"/>
+                        <outlet property="webView" destination="cTn-f6-LfS" id="BJP-1Z-vUp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9kj-UV-VZM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -227,15 +229,15 @@
                         <sections>
                             <tableViewSection id="pEv-QC-4qJ">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="TAW-T3-N4v" imageView="np6-WG-piE" style="IBUITableViewCellStyleDefault" id="0Fm-Ls-UX7">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="TAW-T3-N4v" imageView="np6-WG-piE" style="IBUITableViewCellStyleDefault" id="0Fm-Ls-UX7">
                                         <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Fm-Ls-UX7" id="hjA-do-DqN">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TAW-T3-N4v">
-                                                    <rect key="frame" x="60" y="0.0" width="245" height="43"/>
+                                                    <rect key="frame" x="60" y="0.0" width="225" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -248,15 +250,15 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Vcj-0O-3f5" imageView="3wU-Nn-0xE" style="IBUITableViewCellStyleDefault" id="zfH-ec-Nz7">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Vcj-0O-3f5" imageView="3wU-Nn-0xE" style="IBUITableViewCellStyleDefault" id="zfH-ec-Nz7">
                                         <rect key="frame" x="0.0" y="108" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zfH-ec-Nz7" id="m4m-Tg-wQY">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Antithrombotics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vcj-0O-3f5">
-                                                    <rect key="frame" x="60" y="0.0" width="245" height="43"/>
+                                                    <rect key="frame" x="60" y="0.0" width="225" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -268,16 +270,19 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="07X-eJ-s4x" kind="push" id="1LC-YS-UmK"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Ny5-k3-9Zr" imageView="IWs-AU-aO3" style="IBUITableViewCellStyleDefault" id="UaH-2N-4id">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Ny5-k3-9Zr" imageView="IWs-AU-aO3" style="IBUITableViewCellStyleDefault" id="UaH-2N-4id">
                                         <rect key="frame" x="0.0" y="152" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UaH-2N-4id" id="lxq-S5-UZA">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Feedback" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ny5-k3-9Zr">
-                                                    <rect key="frame" x="60" y="0.0" width="245" height="43"/>
+                                                    <rect key="frame" x="60" y="0.0" width="225" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -298,11 +303,76 @@
                             <outlet property="delegate" destination="ttx-oo-klZ" id="pWo-ZM-amS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="More" id="i5r-JN-6pB"/>
+                    <navigationItem key="navigationItem" title="More" id="i5r-JN-6pB">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="CqP-Td-fQJ"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8b-fj-cLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1466" y="-5079"/>
+        </scene>
+        <!--Antithrombotic View Controller - Antithrombotic View Controller-->
+        <scene sceneID="WOI-LK-qz5">
+            <objects>
+                <tableViewController title="Antithrombotic View Controller" id="07X-eJ-s4x" customClass="AntithromboticViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5PO-2w-9mN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="Cde-rI-Z4V">
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="07X-eJ-s4x" id="6B0-oU-dbU"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AntithromboticCell" rowHeight="44" id="aTE-jV-dcn" customClass="AntithromboticCell">
+                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aTE-jV-dcn" id="7f0-ek-0o3">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Antithrombotic Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqF-F1-NxU">
+                                            <rect key="frame" x="10" y="11" width="300" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="eqF-F1-NxU" id="DrD-1S-dr0"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="07X-eJ-s4x" id="fT7-om-vX5"/>
+                            <outlet property="delegate" destination="07X-eJ-s4x" id="jkC-6N-8vf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Antithrombotics" id="2qU-Av-06b">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="WHE-Ss-MO7"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="Sz0-jG-frA" id="dOo-Xa-k2Z"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ije-Gh-SJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Sz0-jG-frA">
+                    <connections>
+                        <outlet property="delegate" destination="07X-eJ-s4x" id="opO-0K-hwH"/>
+                        <outlet property="searchBar" destination="Cde-rI-Z4V" id="hH1-we-a9h"/>
+                        <outlet property="searchContentsController" destination="07X-eJ-s4x" id="TSI-2b-f3h"/>
+                        <outlet property="searchResultsDataSource" destination="07X-eJ-s4x" id="GzM-3c-8r9"/>
+                        <outlet property="searchResultsDelegate" destination="07X-eJ-s4x" id="Xs2-xQ-qK2"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-974" y="-5079"/>
         </scene>
         <!--Left View Controller - Left View Controller-->
         <scene sceneID="IVk-RK-wn5">
@@ -322,7 +392,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TrialCell" id="ZM5-pI-7pV" customClass="TrialCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TrialCell" rowHeight="44" id="ZM5-pI-7pV" customClass="TrialCell">
                                 <rect key="frame" x="0.0" y="130" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZM5-pI-7pV" id="tzv-U2-Mtc">

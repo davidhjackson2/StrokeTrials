@@ -23,10 +23,6 @@
     return self;
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    self.navigationItem.title = [NSString stringWithFormat:@"%@", self.trial.acro];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];

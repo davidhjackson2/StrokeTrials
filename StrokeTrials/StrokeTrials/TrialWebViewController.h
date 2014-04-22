@@ -8,10 +8,11 @@
 
 #import <MessageUI/MessageUI.h>
 #import <UIKit/UIKit.h>
+#import "Reachability.h"
 
 @interface TrialWebViewController : UIViewController <UIWebViewDelegate> {
-    IBOutlet UIWebView *webview;
-    IBOutlet UIActivityIndicatorView *activityind;
+    IBOutlet UIWebView *webView;
+    IBOutlet UIActivityIndicatorView *activityIndicatorView;
     NSTimer *timer;
 }
 
