@@ -160,25 +160,4 @@
     }
 }
 
--(void)pullFromNet {
-    Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
-    NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
-    if (networkStatus == NotReachable) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Error" message:@"The Internet connection appears to be offline." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-    } else {
-        NSURL *url = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/u/274948931/StrokeTrials.xml"];
-        parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
-        [parser setDelegate:self];
-        [parser setShouldResolveExternalEntities:NO];
-        [parser parse];
-        [self performSelector:@selector(updateTable) withObject:nil afterDelay:1];
-    }
-}
-
-- (void)updateTable {
-    [self.tableView reloadData];
-    [self.refreshControl endRefreshing];
-}
-
 @end

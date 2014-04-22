@@ -407,10 +407,10 @@
             </objects>
             <point key="canvasLocation" x="-1216" y="-837"/>
         </scene>
-        <!--View Controller - About View Controller-->
+        <!--About View Controller - About View Controller-->
         <scene sceneID="rdb-mU-6nM">
             <objects>
-                <viewController title="About View Controller" id="cO9-Ku-Dj0" sceneMemberID="viewController">
+                <viewController title="About View Controller" id="cO9-Ku-Dj0" customClass="AboutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RsP-hL-JcE"/>
                         <viewControllerLayoutGuide type="bottom" id="OPa-wg-yiP"/>
