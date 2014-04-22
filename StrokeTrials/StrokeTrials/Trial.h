@@ -17,5 +17,6 @@
 @property (nonatomic, strong) NSMutableArray *res;
 @property (nonatomic, strong) NSMutableArray *lim;
 @property (nonatomic, strong) NSMutableString *link;
+@property (nonatomic, strong) NSMutableString *tags;
 
 @end

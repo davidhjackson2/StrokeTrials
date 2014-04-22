@@ -18,6 +18,7 @@
     self.res = [[NSMutableArray alloc] init];
     self.lim = [[NSMutableArray alloc] init];
     self.link = [[NSMutableString alloc] init];
+    self.tags = [[NSMutableString alloc] init];
     return self;
 }
 

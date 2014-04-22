@@ -15,6 +15,7 @@
 		634E416B18FB108F0044E599 /* TrialDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634E416218FB108F0044E599 /* TrialDetailViewController.m */; };
 		634E416C18FB108F0044E599 /* TrialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634E416418FB108F0044E599 /* TrialViewController.m */; };
 		634E41B918FB39C50044E599 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634E41B818FB39C50044E599 /* Main_iPhone.storyboard */; };
+		6369C8B21906AA23003AC56D /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6369C8B11906AA23003AC56D /* AboutViewController.m */; };
 		6377C3A718FB5F31008C98C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6377C3A618FB5F31008C98C3 /* AppDelegate.m */; };
 		6377C3AF18FB606E008C98C3 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6377C3AA18FB606E008C98C3 /* LeftViewController.m */; };
 		6377C3B018FB606E008C98C3 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6377C3AB18FB606E008C98C3 /* Main_iPad.storyboard */; };
@@ -61,6 +62,8 @@
 		634E416318FB108F0044E599 /* TrialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrialViewController.h; sourceTree = "<group>"; };
 		634E416418FB108F0044E599 /* TrialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrialViewController.m; sourceTree = "<group>"; };
 		634E41B818FB39C50044E599 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
+		6369C8B01906AA23003AC56D /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		6369C8B11906AA23003AC56D /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		6377C3A518FB5F31008C98C3 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6377C3A618FB5F31008C98C3 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6377C3A918FB606E008C98C3 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -197,6 +200,8 @@
 		6378095418BDBCB000543CB3 /* StrokeTrials */ = {
 			isa = PBXGroup;
 			children = (
+				6369C8B01906AA23003AC56D /* AboutViewController.h */,
+				6369C8B11906AA23003AC56D /* AboutViewController.m */,
 				63E86409190090890022858F /* Antithrombotic.h */,
 				63E8640A190090890022858F /* Antithrombotic.m */,
 				63E8640D190090890022858F /* AntithromboticCell.h */,
@@ -362,6 +367,7 @@
 				6377C3AF18FB606E008C98C3 /* LeftViewController.m in Sources */,
 				6377C3BC18FB8300008C98C3 /* TrialCell.m in Sources */,
 				63E86411190090890022858F /* Antithrombotic.m in Sources */,
+				6369C8B21906AA23003AC56D /* AboutViewController.m in Sources */,
 				63E86417190090920022858F /* Reachability.m in Sources */,
 				6377C3BD18FB8300008C98C3 /* TrialWebViewController.m in Sources */,
 				6377C3A718FB5F31008C98C3 /* AppDelegate.m in Sources */,
