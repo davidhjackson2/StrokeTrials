@@ -12,20 +12,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
         
-        UINavigationController *leftNavController = [splitViewController.viewControllers objectAtIndex:0];
-        LeftViewController *leftViewController = (LeftViewController *)[leftNavController topViewController];
-        Trial *firstTrial = [[[leftViewController trials] objectAtIndex:0] objectForKey: @"trial"];
+        Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+        NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+        if (networkStatus == NotReachable) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Error" message:@"The Internet connection appears to be offline." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
+        else {
+            UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
         
-        UINavigationController *rightNavController = [splitViewController.viewControllers objectAtIndex:1];
-        RightViewController *rightViewController = (RightViewController *)[rightNavController topViewController];
-        splitViewController.delegate = rightViewController;
+            UINavigationController *leftNavController = [splitViewController.viewControllers objectAtIndex:0];
+            LeftViewController *leftViewController = (LeftViewController *)[leftNavController topViewController];
+            Trial *firstTrial = [[[leftViewController trials] objectAtIndex:0] objectForKey: @"trial"];
         
-        [rightViewController setTrial:firstTrial];
+            UINavigationController *rightNavController = [splitViewController.viewControllers objectAtIndex:1];
+            RightViewController *rightViewController = (RightViewController *)[rightNavController topViewController];
+            splitViewController.delegate = rightViewController;
         
-        leftViewController.delegate = rightViewController;
+            [rightViewController setTrial:firstTrial];
+        
+            leftViewController.delegate = rightViewController;
+        }
     }
     
     return YES;

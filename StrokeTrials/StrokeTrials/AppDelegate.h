@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LeftViewController.h"
 #import "RightViewController.h"
+#import "Reachability.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
