@@ -17,13 +17,13 @@
         
         UINavigationController *leftNavController = [splitViewController.viewControllers objectAtIndex:0];
         LeftViewController *leftViewController = (LeftViewController *)[leftNavController topViewController];
-        Trial *firstTrial = [[[leftViewController trials] objectAtIndex:0] objectForKey: @"trial"];
+        //Trial *firstTrial = [[[leftViewController trials] objectAtIndex:0] objectForKey: @"trial"];
         
         UINavigationController *rightNavController = [splitViewController.viewControllers objectAtIndex:1];
         RightViewController *rightViewController = (RightViewController *)[rightNavController topViewController];
         splitViewController.delegate = rightViewController;
         
-        [rightViewController setTrial:firstTrial];
+        //[rightViewController setTrial:firstTrial];
         
         leftViewController.delegate = rightViewController;
     }

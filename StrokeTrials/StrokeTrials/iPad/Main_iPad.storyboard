@@ -435,7 +435,7 @@
                     <navigationItem key="navigationItem" title="Stroke Trials" id="hcb-aE-jzR">
                         <barButtonItem key="leftBarButtonItem" title="More" id="fSs-XQ-e4k">
                             <connections>
-                                <segue destination="ttx-oo-klZ" kind="push" id="fhd-Vb-DsA"/>
+                                <segue destination="ttx-oo-klZ" kind="push" identifier="showMore" id="fhd-Vb-DsA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -20,6 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self toggleView:false];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -27,7 +28,6 @@
     [super viewWillAppear:animated];
     scrollView.delegate = self;
     [scrollView setShowsHorizontalScrollIndicator:NO];
-    
     [self refreshUI];
 }
 
@@ -55,6 +55,7 @@
         [scrollView setContentOffset:CGPointMake(0,-64) animated:NO];
         [self refreshUI];
         [self.navigationController popViewControllerAnimated:YES];
+        [self toggleView:true];
     }
 }
 
@@ -177,6 +178,15 @@
         [[segue destinationViewController] setAcro:self.trial.acro];
         [[segue destinationViewController] setLink:self.trial.link];
         [[segue destinationViewController] setTitle:self.trial.title];
+    }
+}
+
+- (void)toggleView:(bool)visible {
+    if(visible) {
+        scrollView.hidden=NO;
+    }
+    else {
+        scrollView.hidden=YES;
     }
 }
 

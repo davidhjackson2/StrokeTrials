@@ -165,5 +165,10 @@
         [xmlTrial.tags appendString:string];
     }
 }
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showMore"]) {
+        [self.delegate toggleView:false];
+    }
+}
 
 @end

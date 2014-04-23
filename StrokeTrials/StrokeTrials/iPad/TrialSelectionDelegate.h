@@ -11,5 +11,6 @@
 @protocol TrialSelectionDelegate <NSObject>
 
 -(void)selectedTrial:(Trial *)newTrial;
+-(void)toggleView:(bool)visible;
 
 @end
