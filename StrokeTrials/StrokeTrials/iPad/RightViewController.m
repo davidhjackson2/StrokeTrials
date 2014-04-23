@@ -25,8 +25,16 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    scrollView.delegate = self;
+    [scrollView setShowsHorizontalScrollIndicator:NO];
     
     [self refreshUI];
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scllView
+{
+    if (scllView.contentOffset.x > 0 ||  scrollView.contentOffset.x < 0)
+        scllView.contentOffset = CGPointMake(0, scllView.contentOffset.y);
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,7 +52,9 @@
 {
     if (_trial != trial) {
         _trial = trial;
+        [scrollView setContentOffset:CGPointMake(0,-64) animated:NO];
         [self refreshUI];
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 
