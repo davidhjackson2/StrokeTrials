@@ -8,7 +8,7 @@
 
 #import "RightViewController.h"
 
-@interface RightViewController () <MFMailComposeViewControllerDelegate>
+@interface RightViewController ()
 
 @end
 
@@ -20,13 +20,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self toggleView:false];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+    scrollView.delegate = self;
+    [scrollView setShowsHorizontalScrollIndicator:NO];
     [self refreshUI];
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)sView
+{
+    if (sView.contentOffset.x > 0 ||  scrollView.contentOffset.x < 0)
+        sView.contentOffset = CGPointMake(0, sView.contentOffset.y);
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,7 +52,10 @@
 {
     if (_trial != trial) {
         _trial = trial;
+        [scrollView setContentOffset:CGPointMake(0,-64) animated:NO];
         [self refreshUI];
+        [self.navigationController popViewControllerAnimated:YES];
+        [self toggleView:true];
     }
 }
 
@@ -167,6 +178,14 @@
         [[segue destinationViewController] setAcro:self.trial.acro];
         [[segue destinationViewController] setLink:self.trial.link];
         [[segue destinationViewController] setTitle:self.trial.title];
+    }
+}
+
+- (void)toggleView:(bool)visible {
+    if(visible) {
+        scrollView.hidden = NO;
+    } else {
+        scrollView.hidden = YES;
     }
 }
 

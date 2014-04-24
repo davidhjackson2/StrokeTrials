@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Reachability.h"
 #import "Trial.h"
 #import "TrialCell.h"
 #import "TrialSelectionDelegate.h"

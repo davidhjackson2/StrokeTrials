@@ -20,6 +20,13 @@
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
     if (self = [super initWithCoder:aDecoder]) {
+        Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+        NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+        if (networkStatus == NotReachable) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Error" message:@"The Internet connection appears to be offline." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
+        
         self.trials = [NSMutableArray array];
         NSURL *url = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/u/274948931/StrokeTrials.xml"];
         parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
@@ -27,7 +34,7 @@
         [parser setShouldResolveExternalEntities:NO];
         [parser parse];
         
-        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"trial.acro" ascending:YES];
+        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"trial.acro" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
         [self.trials sortUsingDescriptors:[NSArray arrayWithObject:sort]];
     }
     
@@ -156,6 +163,12 @@
         [xmlTrial.lim addObject:string];
     } else if ([element isEqualToString:@"tag"]) {
         [xmlTrial.tags appendString:string];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showMore"]) {
+        [self.delegate toggleView:false];
     }
 }
 

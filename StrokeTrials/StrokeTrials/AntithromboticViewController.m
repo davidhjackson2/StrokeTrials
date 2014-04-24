@@ -40,7 +40,7 @@
     [parser setShouldResolveExternalEntities:NO];
     [parser parse];
     
-    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"antithrombotic.name" ascending:YES];
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"antithrombotic.name" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
     [antithrombotics sortUsingDescriptors:[NSArray arrayWithObject:sort]];
 }
 

@@ -27,7 +27,7 @@
                         <viewControllerLayoutGuide type="top" id="8Zj-io-PCs"/>
                         <viewControllerLayoutGuide type="bottom" id="jhP-Kz-b6X"/>
                     </layoutGuides>
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" id="y54-OR-ubs">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" id="y54-OR-ubs">
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -166,8 +166,9 @@
                         <outlet property="blLabel" destination="FLW-dD-6Nd" id="0zo-8o-cx6"/>
                         <outlet property="limLabel" destination="39d-op-H7C" id="DUj-QC-Y66"/>
                         <outlet property="resLabel" destination="xSh-jt-HAh" id="EgU-Bn-QVg"/>
+                        <outlet property="scrollView" destination="y54-OR-ubs" id="FAt-3F-Hl8"/>
                         <outlet property="titleLabel" destination="W1z-iE-TEB" id="ooc-fJ-XtM"/>
-                        <outlet property="view" destination="y54-OR-ubs" id="VLl-yb-2AQ"/>
+                        <outlet property="view" destination="y54-OR-ubs" id="eOA-RI-P2r"/>
                         <outlet property="yearLabel" destination="hKu-RE-ibv" id="d1w-7l-XE0"/>
                     </connections>
                 </viewController>
@@ -434,7 +435,7 @@
                     <navigationItem key="navigationItem" title="Stroke Trials" id="hcb-aE-jzR">
                         <barButtonItem key="leftBarButtonItem" title="More" id="fSs-XQ-e4k">
                             <connections>
-                                <segue destination="ttx-oo-klZ" kind="push" id="fhd-Vb-DsA"/>
+                                <segue destination="ttx-oo-klZ" kind="push" identifier="showMore" id="fhd-Vb-DsA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

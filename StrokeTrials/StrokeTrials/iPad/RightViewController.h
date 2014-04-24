@@ -12,7 +12,9 @@
 #import "Trial.h"
 #import "TrialSelectionDelegate.h"
 
-@interface RightViewController : UIViewController <UISplitViewControllerDelegate, TrialSelectionDelegate>
+@interface RightViewController : UIViewController <MFMailComposeViewControllerDelegate, TrialSelectionDelegate, UIScrollViewDelegate, UISplitViewControllerDelegate> {
+    IBOutlet UIScrollView *scrollView;
+}
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearLabel;

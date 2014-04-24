@@ -40,7 +40,7 @@
     [parser setShouldResolveExternalEntities:NO];
     [parser parse];
     
-    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"trial.acro" ascending:YES];
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"trial.acro" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
     [trials sortUsingDescriptors:[NSArray arrayWithObject:sort]];
 }
 
