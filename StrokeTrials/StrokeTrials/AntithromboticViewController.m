@@ -93,13 +93,24 @@
     if ([segue.identifier isEqualToString:@"showAntithromboticDetail"]) {
         NSIndexPath *indexPath = nil;
         
-        if (self.searchDisplayController.active) {
-            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-            [[segue destinationViewController] setAntithrombotic:[[searchResults objectAtIndex:indexPath.row] objectForKey: @"antithrombotic"]];
-        } else {
-            indexPath = [self.tableView indexPathForSelectedRow];
-            [[segue destinationViewController] setAntithrombotic:[antithrombotics[indexPath.row] objectForKey: @"antithrombotic"]];
-       }
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+            if (self.searchDisplayController.active) {
+                indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+                [[segue destinationViewController] setAntithrombotic:[[searchResults objectAtIndex:indexPath.row] objectForKey: @"antithrombotic"]];
+            } else {
+                indexPath = [self.tableView indexPathForSelectedRow];
+                [[segue destinationViewController] setAntithrombotic:[antithrombotics[indexPath.row] objectForKey: @"antithrombotic"]];
+            }
+        }
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+            if (self.searchDisplayController.active) {
+                indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+                [[[[segue destinationViewController] viewControllers] objectAtIndex:0] setAntithrombotic:[[searchResults objectAtIndex:indexPath.row] objectForKey: @"antithrombotic"]];
+            } else {
+                indexPath = [self.tableView indexPathForSelectedRow];
+                [[[[segue destinationViewController] viewControllers] objectAtIndex:0] setAntithrombotic:[antithrombotics[indexPath.row] objectForKey: @"antithrombotic"]];
+            }
+        }
     }
 }
 
