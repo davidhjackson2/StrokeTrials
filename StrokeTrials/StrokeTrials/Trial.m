@@ -13,7 +13,9 @@
 -(id) init {
     self.acro = [[NSMutableString alloc] init];
     self.title = [[NSMutableString alloc] init];
+    self.journal = [[NSMutableString alloc] init];
     self.year = [[NSMutableString alloc] init];
+    self.yearValue = [[NSMutableString alloc] init];
     self.bl = [[NSMutableString alloc] init];
     self.res = [[NSMutableArray alloc] init];
     self.lim = [[NSMutableArray alloc] init];

@@ -31,7 +31,7 @@
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="'##" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMg-sr-Roo">
                                             <rect key="frame" x="15" y="4" width="25" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ACRO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFP-vw-8jh">
@@ -62,6 +62,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Stroke Trials" id="utS-Ph-Zss">
+                        <barButtonItem key="leftBarButtonItem" title="Filter" id="l1u-my-29g"/>
                         <barButtonItem key="rightBarButtonItem" title="More" id="Rax-ss-XDp">
                             <connections>
                                 <segue destination="HDw-FK-FcD" kind="push" id="CXO-Ba-BSu"/>
@@ -193,6 +194,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Original Article">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -257,7 +259,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qT0-sw-uU5">
+                            <webView multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qT0-sw-uU5">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -268,6 +270,12 @@
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qT0-sw-uU5" firstAttribute="top" secondItem="2Yk-rj-lNT" secondAttribute="top" id="4gh-DA-VWc"/>
+                            <constraint firstItem="eaE-2R-gA7" firstAttribute="top" secondItem="qT0-sw-uU5" secondAttribute="bottom" id="T7O-tu-U59"/>
+                            <constraint firstAttribute="trailing" secondItem="qT0-sw-uU5" secondAttribute="trailing" id="TbS-Fv-m3M"/>
+                            <constraint firstItem="qT0-sw-uU5" firstAttribute="leading" secondItem="2Yk-rj-lNT" secondAttribute="leading" id="XoG-87-pOJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L5a-iS-WLK">
                         <barButtonItem key="backBarButtonItem" title="Back" id="bUP-Tl-bzz"/>

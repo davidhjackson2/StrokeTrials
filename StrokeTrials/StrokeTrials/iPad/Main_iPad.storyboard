@@ -120,6 +120,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Original Article">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -565,7 +566,7 @@
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="'##" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTb-Qv-HPC">
                                             <rect key="frame" x="15" y="4" width="25" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ACRO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbG-IX-hId">
@@ -595,7 +596,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Stroke Trials" id="hcb-aE-jzR">
-                        <barButtonItem key="leftBarButtonItem" title="More" id="fSs-XQ-e4k">
+                        <barButtonItem key="leftBarButtonItem" title="Filter" id="34K-RX-RXF"/>
+                        <barButtonItem key="rightBarButtonItem" title="More" id="fSs-XQ-e4k">
                             <connections>
                                 <segue destination="ttx-oo-klZ" kind="push" identifier="showMore" id="fhd-Vb-DsA"/>
                             </connections>

@@ -17,7 +17,10 @@
 }
 
 @property (copy, nonatomic) NSMutableString *acro;
+@property (copy, nonatomic) NSMutableString *journal;
 @property (copy, nonatomic) NSMutableString *link;
 @property (copy, nonatomic) NSMutableString *title;
+@property (copy, nonatomic) NSMutableString *yearValue;
+@property (copy, nonatomic) NSMutableString *check;
 
 @end

@@ -123,7 +123,7 @@
 - (IBAction)share:(id)sender
 {
     NSString *subject = self.trial.acro;
-    NSString *messageBody = [NSString stringWithFormat:@"<html><body><br\\>Check out this article I found using the free <a href='https://itunes.apple.com/us/app/acs-trials/id451326968?mt=8'>Stroke Trials</a> iOS app.</br></br><a href='%@'>%@</br></a>%@</body></html>", self.trial.link, self.trial.acro, self.trial.title];
+    NSString *messageBody = [NSString stringWithFormat:@"<html><body><br\\>Check out this article I found using the free <a href=''>Stroke Trials</a> iOS app.</br></br><a href='%@'>%@</br></a><b>%@</b></br><i>%@</i></br>%@</body></html>", self.trial.link, self.trial.acro, self.trial.title, self.trial.journal, self.trial.year];
     
     MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
     mc.mailComposeDelegate = self;
@@ -141,8 +141,10 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showLink"]) {
         [[segue destinationViewController] setAcro:self.trial.acro];
+        [[segue destinationViewController] setJournal:self.trial.journal];
         [[segue destinationViewController] setLink:self.trial.link];
         [[segue destinationViewController] setTitle:self.trial.title];
+        [[segue destinationViewController] setYearValue:self.trial.year];
     }
 }
 

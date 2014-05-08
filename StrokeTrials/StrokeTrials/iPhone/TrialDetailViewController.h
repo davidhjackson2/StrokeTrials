@@ -13,6 +13,7 @@
 @interface TrialDetailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *journalLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearLabel;
 @property (weak, nonatomic) IBOutlet UILabel *blLabel;
 @property (weak, nonatomic) IBOutlet UILabel *resLabel;

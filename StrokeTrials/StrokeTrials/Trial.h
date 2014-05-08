@@ -12,7 +12,9 @@
 
 @property (nonatomic, strong) NSMutableString *acro;
 @property (nonatomic, strong) NSMutableString *title;
+@property (nonatomic, strong) NSMutableString *journal;
 @property (nonatomic, strong) NSMutableString *year;
+@property (nonatomic, strong) NSMutableString *yearValue;
 @property (nonatomic, strong) NSMutableString *bl;
 @property (nonatomic, strong) NSMutableArray *res;
 @property (nonatomic, strong) NSMutableArray *lim;

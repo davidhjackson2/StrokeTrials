@@ -145,8 +145,8 @@
         [xmlTrial.acro appendString:string];
     } else if ([element isEqualToString:@"title"]) {
         [xmlTrial.title appendString:string];
-    } else if ([element isEqualToString:@"link"]) {
-        [xmlTrial.link appendString:string];
+    } else if ([element isEqualToString:@"journal"]) {
+        [xmlTrial.journal appendString:string];
     } else if ([element isEqualToString:@"year"]) {
         [xmlTrial.year appendString:string];
     } else if ([element isEqualToString:@"bl"]) {
@@ -155,6 +155,8 @@
         [xmlTrial.res addObject:string];
     } else if ([element isEqualToString:@"lim"]) {
         [xmlTrial.lim addObject:string];
+    } else if ([element isEqualToString:@"link"]) {
+        [xmlTrial.link appendString:string];
     } else if ([element isEqualToString:@"tag"]) {
         [xmlTrial.tags appendString:string];
     }

@@ -51,7 +51,7 @@
 
 - (void)showEmail
 {
-    NSString *subject = @"Stroke Trials Feedback";
+    NSString *subject = @"Stroke Trials App - Feedback";
     NSArray *toRecipients = [NSArray arrayWithObject:@"stroketrialsapp@gmail.com"];
     
     MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
