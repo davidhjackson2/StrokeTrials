@@ -33,6 +33,13 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:myURL];
     self.navigationItem.title = self.acro;
     [webView loadRequest:request];
+    
+    //trying to get PDF working
+    bool iBooksInstalled = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"ibooks://"]];
+    if (iBooksInstalled) {
+        UIDocumentInteractionController *docController = [UIDocumentInteractionController interactionControllerWithURL:myURL];
+        [docController presentOpenInMenuFromRect:CGRectZero inView:self.view animated:YES];
+    }
 }
 
 - (IBAction)share:(id)sender
@@ -60,6 +67,15 @@
 -(void)webViewDidFinishLoad:(UIWebView *) webView {
     [activityIndicatorView stopAnimating];
     activityIndicatorView = nil;
+}
+
+-(BOOL) webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
+    if ( inType == UIWebViewNavigationTypeLinkClicked ) {
+        [[UIApplication sharedApplication] openURL:[inRequest URL]];
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end
