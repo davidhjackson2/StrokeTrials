@@ -26,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [scrollView setContentOffset:CGPointMake(0,-64) animated:NO];
     self.navigationController.navigationBar.topItem.title = @"Back";
     self.title = self.trial.acro;
     self.titleLabel.text = [self.trial.title uppercaseString];
@@ -113,6 +114,18 @@
         }
     }
     self.limLabel.text = limText;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    scrollView.delegate = self;
+    [self refreshUI];
+}
+
+-(void)refreshUI
+{
+    [scrollView setContentOffset:CGPointMake(0,-64) animated:NO];
 }
 
 - (void)didReceiveMemoryWarning

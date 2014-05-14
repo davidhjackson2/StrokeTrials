@@ -52,7 +52,6 @@
 {
     if (_trial != trial) {
         _trial = trial;
-        [scrollView setContentOffset:CGPointMake(0,-64) animated:NO];
         [self refreshUI];
         [self.navigationController popViewControllerAnimated:YES];
         [self toggleView:true];
@@ -61,6 +60,7 @@
 
 -(void)refreshUI
 {
+    [scrollView setContentOffset:CGPointMake(0,-64) animated:NO];
     self.navigationController.navigationBar.topItem.title = @"Back";
     self.title = self.trial.acro;
     self.titleLabel.text = [self.trial.title uppercaseString];

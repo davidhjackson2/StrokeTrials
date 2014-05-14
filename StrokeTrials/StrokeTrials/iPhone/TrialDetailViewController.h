@@ -10,7 +10,9 @@
 #import <UIKit/UIKit.h>
 #import "Trial.h"
 
-@interface TrialDetailViewController : UIViewController
+@interface TrialDetailViewController : UIViewController <UIScrollViewDelegate> {
+    IBOutlet UIScrollView *scrollView;
+}
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *journalLabel;

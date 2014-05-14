@@ -194,7 +194,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Original Article">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -238,6 +237,7 @@
                         <outlet property="blLabel" destination="vfe-R1-xwP" id="QdW-tX-8TA"/>
                         <outlet property="limLabel" destination="urj-p3-GJb" id="ygg-Se-T1D"/>
                         <outlet property="resLabel" destination="5Cp-ax-S1g" id="gbN-OZ-Ksn"/>
+                        <outlet property="scrollView" destination="9mF-zc-R3l" id="3iv-vp-lAa"/>
                         <outlet property="titleLabel" destination="ASt-2X-dud" id="hgX-Xx-3v0"/>
                         <outlet property="view" destination="9mF-zc-R3l" id="S5a-WB-RW0"/>
                         <outlet property="yearLabel" destination="2Pu-PC-j3R" id="EDr-ha-xO7"/>
