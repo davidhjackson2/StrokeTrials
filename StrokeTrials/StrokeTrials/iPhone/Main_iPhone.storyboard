@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="CcX-Rl-xqG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="CcX-Rl-xqG">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -263,6 +263,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DSK-Wm-GEK">
                                 <rect key="frame" x="150" y="193" width="20" height="20"/>
@@ -271,10 +272,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qT0-sw-uU5" firstAttribute="top" secondItem="2Yk-rj-lNT" secondAttribute="top" id="4gh-DA-VWc"/>
-                            <constraint firstItem="eaE-2R-gA7" firstAttribute="top" secondItem="qT0-sw-uU5" secondAttribute="bottom" id="T7O-tu-U59"/>
-                            <constraint firstAttribute="trailing" secondItem="qT0-sw-uU5" secondAttribute="trailing" id="TbS-Fv-m3M"/>
-                            <constraint firstItem="qT0-sw-uU5" firstAttribute="leading" secondItem="2Yk-rj-lNT" secondAttribute="leading" id="XoG-87-pOJ"/>
+                            <constraint firstItem="qT0-sw-uU5" firstAttribute="top" secondItem="2Yk-rj-lNT" secondAttribute="top" id="4kZ-7n-Z4Z"/>
+                            <constraint firstItem="qT0-sw-uU5" firstAttribute="leading" secondItem="2Yk-rj-lNT" secondAttribute="leading" id="5g4-4e-aPc"/>
+                            <constraint firstItem="eaE-2R-gA7" firstAttribute="top" secondItem="qT0-sw-uU5" secondAttribute="bottom" id="PtM-yJ-ReV"/>
+                            <constraint firstAttribute="trailing" secondItem="qT0-sw-uU5" secondAttribute="trailing" id="ZXC-Ld-lJF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L5a-iS-WLK">

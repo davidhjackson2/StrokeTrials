@@ -186,8 +186,11 @@
 - (void)toggleView:(bool)visible {
     if(visible) {
         scrollView.hidden = NO;
-    } else {
+        self.navigationController.navigationBar.topItem.rightBarButtonItem.title = @"Share";
+    }
+    else {
         scrollView.hidden = YES;
+        self.navigationController.navigationBar.topItem.rightBarButtonItem.title = nil;
     }
 }
 

@@ -28,7 +28,7 @@
         }
         
         self.trials = [NSMutableArray array];
-        NSURL *url = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/u/274948931/StrokeTrials.xml"];
+        NSURL *url = [NSURL URLWithString:@"https://sites.google.com/site/stroketrialsapp/home/manager/StrokeTrials.xml"];
         parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
         [parser setDelegate:self];
         [parser setShouldResolveExternalEntities:NO];
@@ -117,8 +117,15 @@
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
-    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"(trial.title contains[c] %@) || (trial.acro contains[c] %@) || (trial.year contains[c] %@) || (trial.tags contains[c] %@)", searchText, searchText, searchText, searchText];
-    searchResults = [self.trials filteredArrayUsingPredicate:resultPredicate];
+    NSArray *query = [searchText componentsSeparatedByString:@" "];
+    for (int i = 0; i < query.count; i++) {
+        NSPredicate *resultTitlePredicate = [NSPredicate predicateWithFormat:@"trial.title contains[c] %@", query[i]];
+        NSPredicate *resultAcroPredicate = [NSPredicate predicateWithFormat:@"trial.acro contains[c] %@", query[i]];
+        NSPredicate *resultYearPredicate = [NSPredicate predicateWithFormat:@"trial.year contains[c] %@", query[i]];
+        NSPredicate *resultTagsPredicate = [NSPredicate predicateWithFormat:@"trial.tags contains[c] %@", query[i]];
+        NSPredicate *resultPredicate = [NSCompoundPredicate orPredicateWithSubpredicates: @[resultTitlePredicate, resultAcroPredicate, resultYearPredicate, resultTagsPredicate]];
+        searchResults = [self.trials filteredArrayUsingPredicate:resultPredicate];
+    }
 }
 
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString

@@ -34,7 +34,7 @@
     
     [super viewDidLoad];
     antithrombotics = [[NSMutableArray alloc] init];
-    NSURL *url = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/u/274948931/Antithrombotics.xml"];
+    NSURL *url = [NSURL URLWithString:@"https://sites.google.com/site/stroketrialsapp/home/manager/Antithrombotics.xml"];
     parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
     [parser setDelegate:self];
     [parser setShouldResolveExternalEntities:NO];
@@ -160,7 +160,7 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Error" message:@"The Internet connection appears to be offline." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     } else {
-        NSURL *url = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/u/274948931/StrokeTrials.xml"];
+        NSURL *url = [NSURL URLWithString:@"https://sites.google.com/site/stroketrialsapp/home/manager/StrokeTrials.xml"];
         parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
         [parser setDelegate:self];
         [parser setShouldResolveExternalEntities:NO];
