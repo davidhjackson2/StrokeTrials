@@ -113,6 +113,8 @@
     if (self.delegate) {
         [self.delegate selectedTrial:selectedTrial];
     }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
