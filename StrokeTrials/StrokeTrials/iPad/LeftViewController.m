@@ -113,8 +113,6 @@
     if (self.delegate) {
         [self.delegate selectedTrial:selectedTrial];
     }
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
@@ -180,6 +178,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showMore"]) {
         [self.delegate toggleView:false];
+        [self.delegate selectedTrial:nil];
     }
 }
 

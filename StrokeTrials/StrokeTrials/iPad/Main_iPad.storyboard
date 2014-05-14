@@ -164,8 +164,12 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="blLabel" destination="FLW-dD-6Nd" id="0zo-8o-cx6"/>
+                        <outlet property="blTitleLabel" destination="C8X-cS-6hB" id="0Wp-91-frG"/>
                         <outlet property="limLabel" destination="39d-op-H7C" id="DUj-QC-Y66"/>
+                        <outlet property="limTitleLabel" destination="ZNq-MJ-GM9" id="Jo6-t8-ADy"/>
+                        <outlet property="linkButton" destination="nf9-fo-jaE" id="tnz-y5-PYz"/>
                         <outlet property="resLabel" destination="xSh-jt-HAh" id="EgU-Bn-QVg"/>
+                        <outlet property="resTitleLabel" destination="aqb-0p-JRN" id="bsq-tW-1Ki"/>
                         <outlet property="scrollView" destination="y54-OR-ubs" id="FAt-3F-Hl8"/>
                         <outlet property="titleLabel" destination="W1z-iE-TEB" id="ooc-fJ-XtM"/>
                         <outlet property="view" destination="y54-OR-ubs" id="eOA-RI-P2r"/>
@@ -397,14 +401,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TAW-T3-N4v">
-                                                    <rect key="frame" x="60" y="0.0" width="225" height="43"/>
+                                                    <rect key="frame" x="54" y="0.0" width="231" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="About.png" id="np6-WG-piE">
-                                                    <rect key="frame" x="15" y="6" width="30" height="30"/>
+                                                    <rect key="frame" x="15" y="9" width="24" height="24"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -421,14 +425,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Antithrombotics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vcj-0O-3f5">
-                                                    <rect key="frame" x="60" y="0.0" width="225" height="43"/>
+                                                    <rect key="frame" x="54" y="0.0" width="231" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Antithrombotics.png" id="3wU-Nn-0xE">
-                                                    <rect key="frame" x="15" y="6" width="30" height="30"/>
+                                                    <rect key="frame" x="15" y="9" width="24" height="24"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -445,14 +449,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Feedback" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ny5-k3-9Zr">
-                                                    <rect key="frame" x="60" y="0.0" width="225" height="43"/>
+                                                    <rect key="frame" x="54" y="0.0" width="231" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Feedback.png" id="IWs-AU-aO3">
-                                                    <rect key="frame" x="15" y="6" width="30" height="30"/>
+                                                    <rect key="frame" x="15" y="10" width="24" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -653,9 +657,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="About.png" width="30" height="30"/>
-        <image name="Antithrombotics.png" width="30" height="30"/>
-        <image name="Feedback.png" width="30" height="30"/>
+        <image name="About.png" width="24" height="24"/>
+        <image name="Antithrombotics.png" width="24" height="24"/>
+        <image name="Feedback.png" width="24" height="22"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
