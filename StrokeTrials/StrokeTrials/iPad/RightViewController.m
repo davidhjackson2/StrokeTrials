@@ -183,12 +183,32 @@
 
 - (void)toggleView:(bool)visible {
     if(visible) {
-        scrollView.hidden=NO;
+        //scrollView.hidden=NO;
         self.navigationController.navigationBar.topItem.rightBarButtonItem.title = @"Share";
+        //self.titleLabel.hidden=NO;
+        //self.yearLabel.hidden=NO;
+        //self.blLabel.hidden=NO;
+        //self.resLabel.hidden=NO;
+        //self.limLabel.hidden=NO;
+        self.blTitleLabel.hidden=NO;
+        self.resTitleLabel.hidden=NO;
+        self.limTitleLabel.hidden=NO;
+        self.linkButton.hidden=NO;
     }
     else {
-        scrollView.hidden=YES;
+        //scrollView.hidden=YES;
         self.navigationController.navigationBar.topItem.rightBarButtonItem.title = nil;
+        [self selectedTrial:nil];
+        //self.navigationController.navigationBar.topItem.title = nil;
+        //self.titleLabel.hidden=YES;
+        //self.yearLabel.hidden=YES;
+        //self.blLabel.hidden=YES;
+        //self.resLabel.hidden=YES;
+        //self.limLabel.hidden=YES;
+        self.blTitleLabel.hidden=YES;
+        self.resTitleLabel.hidden=YES;
+        self.limTitleLabel.hidden=YES;
+        self.linkButton.hidden=YES;
     }
 }
 

@@ -164,8 +164,12 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="blLabel" destination="FLW-dD-6Nd" id="0zo-8o-cx6"/>
+                        <outlet property="blTitleLabel" destination="C8X-cS-6hB" id="0Wp-91-frG"/>
                         <outlet property="limLabel" destination="39d-op-H7C" id="DUj-QC-Y66"/>
+                        <outlet property="limTitleLabel" destination="ZNq-MJ-GM9" id="Jo6-t8-ADy"/>
+                        <outlet property="linkButton" destination="nf9-fo-jaE" id="tnz-y5-PYz"/>
                         <outlet property="resLabel" destination="xSh-jt-HAh" id="EgU-Bn-QVg"/>
+                        <outlet property="resTitleLabel" destination="aqb-0p-JRN" id="bsq-tW-1Ki"/>
                         <outlet property="scrollView" destination="y54-OR-ubs" id="FAt-3F-Hl8"/>
                         <outlet property="titleLabel" destination="W1z-iE-TEB" id="ooc-fJ-XtM"/>
                         <outlet property="view" destination="y54-OR-ubs" id="eOA-RI-P2r"/>

@@ -28,7 +28,7 @@
         }
         
         self.trials = [NSMutableArray array];
-        NSURL *url = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/u/274948931/StrokeTrials.xml"];
+        NSURL *url = [NSURL URLWithString:@"https://sites.google.com/site/stroketrialsapp/home/manager/StrokeTrials.xml"];
         parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
         [parser setDelegate:self];
         [parser setShouldResolveExternalEntities:NO];
@@ -175,6 +175,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showMore"]) {
         [self.delegate toggleView:false];
+        [self.delegate selectedTrial:nil];
+        //[self.tableView.];
+        //Need to unselect current cell...
     }
 }
 
