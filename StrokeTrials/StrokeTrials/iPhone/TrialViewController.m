@@ -115,23 +115,8 @@
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
-    NSArray *HalfSearchResults;
-    NSMutableArray *AlmostThere;
-    NSArray *query = [searchText componentsSeparatedByString:@" "];
-    NSPredicate *resultTitlePredicate;
-    NSPredicate *resultAcroPredicate;
-    NSPredicate *resultYearPredicate;
-    NSPredicate *resultTagsPredicate;
-    for (int i = 0; i < query.count; i++) {
-        resultTitlePredicate = [NSPredicate predicateWithFormat:@"trial.title contains[c] %@", query[i]];
-        resultAcroPredicate = [NSPredicate predicateWithFormat:@"trial.acro contains[c] %@", query[i]];
-        resultYearPredicate = [NSPredicate predicateWithFormat:@"trial.year contains[c] %@", query[i]];
-        resultTagsPredicate = [NSPredicate predicateWithFormat:@"trial.tags contains[c] %@", query[i]];
-        NSPredicate *resultPredicate = [NSCompoundPredicate orPredicateWithSubpredicates: @[resultTitlePredicate, resultAcroPredicate, resultYearPredicate, resultTagsPredicate]];
-        HalfSearchResults = [trials filteredArrayUsingPredicate:resultPredicate];
-        [AlmostThere addObjectsFromArray:HalfSearchResults];
-    }
-    [searchResults arrayByAddingObjectsFromArray:AlmostThere];
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"(trial.title contains[c] %@) || (trial.acro contains[c] %@) || (trial.year contains[c] %@) || (trial.tags contains[c] %@)", searchText, searchText, searchText, searchText];
+    searchResults = [trials filteredArrayUsingPredicate:resultPredicate];
 }
 
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
