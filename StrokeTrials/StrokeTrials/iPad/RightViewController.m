@@ -185,19 +185,19 @@
 
 - (void)toggleView:(bool)visible {
     if(visible) {
-        self.navigationController.navigationBar.topItem.rightBarButtonItem.title = @"Share";
+        self.shareButton.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Share" style:UIBarButtonItemStyleBordered target:self action:@selector(share:)];
         self.blTitleLabel.hidden=NO;
         self.resTitleLabel.hidden=NO;
         self.limTitleLabel.hidden=NO;
         self.linkButton.hidden=NO;
     }
     else {
-        self.navigationController.navigationBar.topItem.rightBarButtonItem.title = nil;
         [self selectedTrial:nil];
         self.blTitleLabel.hidden=YES;
         self.resTitleLabel.hidden=YES;
         self.limTitleLabel.hidden=YES;
         self.linkButton.hidden=YES;
+        self.shareButton.rightBarButtonItem=nil;
     }
 }
 

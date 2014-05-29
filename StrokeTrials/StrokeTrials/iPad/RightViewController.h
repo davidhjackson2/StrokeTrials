@@ -25,7 +25,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *limTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *limLabel;
 @property (weak, nonatomic) IBOutlet UIButton *linkButton;
+@property (weak, nonatomic) IBOutlet UINavigationItem *shareButton;
 
 @property (nonatomic, strong) Trial *trial;
+
+-(void)toggleView:(bool)visible;
 
 @end
