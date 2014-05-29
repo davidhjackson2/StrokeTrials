@@ -17,6 +17,7 @@
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *journalLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearLabel;
 @property (weak, nonatomic) IBOutlet UILabel *blTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *blLabel;

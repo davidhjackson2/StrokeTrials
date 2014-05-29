@@ -66,6 +66,7 @@
     self.titleLabel.text = [self.trial.title uppercaseString];
     self.yearLabel.text = self.trial.year;
     self.blLabel.text = self.trial.bl;
+    self.journalLabel.text = self.trial.journal;
     
     NSMutableString *resText = [NSMutableString string];
     for (NSString* result in self.trial.res) {

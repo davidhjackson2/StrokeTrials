@@ -62,7 +62,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Stroke Trials" id="utS-Ph-Zss">
-                        <barButtonItem key="leftBarButtonItem" title="Filter" id="l1u-my-29g"/>
                         <barButtonItem key="rightBarButtonItem" title="More" id="Rax-ss-XDp">
                             <connections>
                                 <segue destination="HDw-FK-FcD" kind="push" id="CXO-Ba-BSu"/>
