@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AboutViewController : UIViewController
+@interface AboutViewController : UIViewController <NSXMLParserDelegate> {
+    NSXMLParser *parser;
+    NSMutableDictionary *xmlDict;
+    NSString *element;
+}
+
+- (void)buttonPressed;
 
 @end
