@@ -38,7 +38,7 @@
 - (IBAction)share:(id)sender
 {
     NSString *subject = self.acro;
-    NSString *messageBody = [NSString stringWithFormat:@"<html><body><br\\>Check out this article I found using the free <a href=''>Stroke Trials</a> iOS app.</br></br><a href='%@'>%@</br></br></a><b>%@</b></br></br><i>%@</i></br></br>%@</body></html>", self.link, self.acro, self.title, self.journal, self.yearValue];
+    NSString *messageBody = [NSString stringWithFormat:@"<html><body><br\\>Check out this article I found using the free <a href='https://itunes.apple.com/us/app/stroke-trials/id890659904?mt=8'>Stroke Trials</a> iOS app.</br></br><a href='%@'>%@</br></br></a><b>%@</b></br></br><i>%@</i></br></br>%@</body></html>", self.link, self.acro, self.title, self.journal, self.yearValue];
     
     MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
     mc.mailComposeDelegate = self;
